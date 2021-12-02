@@ -1,12 +1,10 @@
 import React from "react";
+import Inspector from "./Inspector.js"
 
-
-export class Home extends React.Component{
-
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (<h1>Home</h1>)
-    }
+const Home =(props)=> {
+    return (
+                <h3>hello</h3>,
+                <Inspector />
+            )
 }
+export default Home

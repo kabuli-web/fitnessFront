@@ -1,19 +1,18 @@
 import * as actionTypes from "./type.js"
 
-const initialState = {
-        user: {
+const user={
             type: "anonymouse",
             username:"anonymouse"
         }
-    }
+    
 
-export const userAuth = (state = initialState, action)=>{
+export const userAuth = (state = user, action)=>{
     switch (action.type){
         case actionTypes.LoginUser:
-            state.user = action.payload.user
+            state = action.payload
             return state;
         case actionTypes.LogoutUser:
-            state.user = initialState.user
+            state = user
             return state;
         default:
             return state;
