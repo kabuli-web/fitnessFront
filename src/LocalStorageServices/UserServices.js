@@ -1,6 +1,4 @@
-
 import * as helpers from "../helpers/helpers.js"
-
 
 var UserServices = (function() {
     var userData = {};
