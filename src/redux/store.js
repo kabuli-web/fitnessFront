@@ -1,10 +1,8 @@
 import { createStore } from "redux";
+import UserServices from "../LocalStorageServices/UserServices";
 import reducers from "./reducers";
 const initialState = {
-    user : {
-        type: "anonymouse",
-        username:"anonymouse"
-    }
+    user : UserServices.getUserData()
 }
 const store = createStore(
     reducers,

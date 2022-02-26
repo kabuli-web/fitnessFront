@@ -1,20 +1,65 @@
 import * as actionTypes from "./type.js"
+import UserServices from "../../LocalStorageServices/UserServices.js";
 
-const user={
-            type: "anonymouse",
-            username:"anonymouse"
-        }
-    
+const user= UserServices.getUserData();
 
-export const userAuth = (state = user, action)=>{
-    switch (action.type){
-        case actionTypes.LoginUser:
-            state = action.payload
-            return state;
-        case actionTypes.LogoutUser:
-            state = user
-            return state;
-        default:
-            return state;
+function loginUserToApi(user){
+    if(user.username ==="kabuli" && user.password === "123"){
+        return {
+            username: user.username
+        };
+    }else{
+        return {error:"wrong password"};
     }
 }
+
+
+
+export const userAuth = (state = user, action) =>{ 
+            switch (action.type){
+                case actionTypes.LoginUser:
+                    const result = loginUserToApi(action.payload);
+                    if(result.username==null){
+                        state = {error: result.error}
+                        return state;
+                    }
+                    else{
+                        UserServices.setUserData(result);
+                        return result;
+                    }
+                case actionTypes.LogoutUser:
+                    UserServices.setUserData({});
+                    state = {}
+                    return state;
+                case actionTypes.GetUser:
+                    return UserServices.getUserData();
+                case actionTypes.Register:
+                    const RegisterResult = UserServices.RegisterUser(action.payload);
+                    if(RegisterResult.succeed){
+                        return RegisterResult.user;
+                    }
+                    state = {
+                        error: RegisterResult.error
+                    }
+                    return state;
+                case actionTypes.setProgress:
+                    const ProgressResult = UserServices.setUserProgress(action.payload);
+                    if(ProgressResult.succeed){
+                        return ProgressResult.user;
+                    }
+                    ProgressResult.user.error = ProgressResult.error;
+                    state = ProgressResult.user;
+                    return state;
+                case actionTypes.setGoal:
+                    const GoalResult = UserServices.setUserGoal(action.payload);
+                    if(GoalResult.succeed){
+                        return GoalResult.user;
+                    }
+                    GoalResult.user.error = GoalResult.error;
+                    state = GoalResult.user;
+                    return state;
+                default:
+                    return user;
+            }
+        }
+        

@@ -1,14 +1,22 @@
 import React from "react";
 import {Link} from 'react-router-dom'
+import * as actions from "../redux/User/actions"
+import * as helpers from "../helpers/helpers.js"
+import {connect} from "react-redux";
 
-export class Navbar extends React.Component{
-
-    constructor(props){
-        super(props)
+const Navbar = props =>{
+    var user = "anonymouse";
+    let loginLinkTitle = ""
+    helpers.checkUser(props.user,props.getUser);
+    user = props.user;
+    if(!helpers.checkIfLoggedIn(props.user)){
+        console.log(props.user);
+        loginLinkTitle = "Login"
+    }else{
+        loginLinkTitle = "My Profile"
     }
-    render(){
+        console.log(user)
         return (
-            
                 <nav className="navbar navbar-expand-md navbar-light bg-light" >
                      <div className="container">
                     <Link className="navbar-brand text-primary  fw-bold" to="/Home">Fitness App</Link>
@@ -21,7 +29,7 @@ export class Navbar extends React.Component{
                                <Link to="/Home" className="nav-link">Home</Link>
                             </li>
                             <li class="nav-item">
-                               <Link to="/Login" className="nav-link">Login</Link>
+                               <Link to="/Login" className="nav-link">{loginLinkTitle}</Link>
                             </li>
                         </ul>
                     </div>
@@ -29,5 +37,23 @@ export class Navbar extends React.Component{
                 </nav>
             
         )
-    }
-}
+        }
+
+        const mapStateToProps = state => {
+            return {
+                user:state.user,
+                
+            }
+        } 
+        const mapDispatchToProps = (dispatch) => {
+            return {
+                setProgress:progress=>
+                dispatch(actions.setProgress(progress)),
+                getUser: ()=>{
+                    dispatch(actions.GetUser())
+                }
+            }
+            }
+
+const wrappedNavbar = connect(mapStateToProps,mapDispatchToProps)(Navbar);
+export default wrappedNavbar;

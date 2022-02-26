@@ -13,3 +13,35 @@ export const LogoutUser = (user)=>{
         payload : user
     }
 }
+
+export const GetUser = ()=>{
+    return {
+        type: actionTypes.GetUser,
+        
+    }
+    
+}
+
+export const Register = (userRegistration)=>{
+    return { 
+        type: actionTypes.Register,
+        payload: userRegistration
+
+    }
+}
+
+export const setProgress = (progress)=>{
+    return { 
+        type: actionTypes.setProgress,
+        payload: progress
+
+    }
+}
+
+export const setGoal = (progress)=>{
+    return { 
+        type: actionTypes.setGoal,
+        payload: progress
+
+    }
+}
