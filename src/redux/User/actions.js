@@ -10,7 +10,7 @@ export const LoginUser = (user)=>{
 export const LogoutUser = (user)=>{
     return {
         type: actionTypes.LogoutUser,
-        payload : user
+        payload : null
     }
 }
 

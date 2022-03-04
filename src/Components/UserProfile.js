@@ -27,7 +27,10 @@ const UserProfile = (props) => {
             </h1>
             <h3>{props.user.username}</h3>,
             <pre>{JSON.stringify(props.user)}</pre>
-        <button onClick={props.logout}>logout</button>
+        <button onClick={()=>{
+            
+            props.logout()
+        }}>logout</button>
         {getProgress(progressNotAvailable)}
         </div>
     )
@@ -40,6 +43,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
       logout: () => {
+          
         dispatch(actions.LogoutUser())
       }
     };

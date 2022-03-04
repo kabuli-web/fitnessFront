@@ -1,8 +1,6 @@
 var axios = require("axios").default;
 
- let fetchByBodyPart = (
-     ()=>{
-         var fetchWorkouts = (bodyPart)=>{
+ let fetchByBodyPart =  async (bodyPart)=>{
             var options = {
                 method: 'GET',
                 url: 'https://exercisedb.p.rapidapi.com/exercises/target/'+bodyPart,
@@ -12,18 +10,12 @@ var axios = require("axios").default;
                 }
               };
               
-              axios.request(options).then(function (response) {
+                let response = await axios.request(options)
                   console.log(response.data);
                   return response.data
-              }).catch(function (error) {
-                  console.error(error);
-                  return null;
-              });
+              
         
         }
-        return {
-            getWorkouts: fetchWorkouts
-        }
-     }
- )();
+        
+    
 export default fetchByBodyPart ;

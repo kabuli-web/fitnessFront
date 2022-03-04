@@ -26,14 +26,17 @@ let WorkoutService = (()=>{
     var setBodyPartWorkout = function(data){
         let bodyparts = JSON.parse(localStorage.getItem("workouts"));
         let exists =false;
-        if(bodyparts===null){
+        if(bodyparts===null || bodyparts===undefined){
             bodyparts = []
        }else{
-         console.log(bodyparts)
+        
          bodyparts.forEach(element => {
-          if(element.bodypart===data.bodyPart){
-            exists=true;
-            }
+          data.forEach(ele=>{
+            if(element.bodypart===ele.bodyPart){
+                exists=true;
+                return;
+                }
+          })
         });
         }
         if(exists){
@@ -42,10 +45,11 @@ let WorkoutService = (()=>{
               error: "Target Muscle Already exists"
             }
            }
-           bodyparts.push({
-               workouts: data.workouts 
-           })
-           localStorage.setItem('workouts',JSON.stringify(bodyparts))         
+          if(!exists){
+            
+            localStorage.setItem('workouts',JSON.stringify(data)) 
+          }
+
     }
     
     return {

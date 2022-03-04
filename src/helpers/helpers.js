@@ -34,8 +34,7 @@ export const checkUndefinedOrNull = (item,child = "")=>{
 }
 
 export const checkIfLoggedIn =(user)=>{
-    if(user !==null && user.username!==undefined &&user.username!=="anonymouse"){
-      
+    if(user !==null && user.username!==undefined && user.username!=="anonymouse"){
         return true
     }
     return false;
