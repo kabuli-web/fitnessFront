@@ -1,3 +1,6 @@
+
+
+
 import React,{useEffect} from "react";
 import { useState } from "react";
 import {connect} from "react-redux";
@@ -7,20 +10,20 @@ import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
 import WorkoutService from "../LocalStorageServices/WorkoutServices";
 
-const Workouts = (props)=> {
-    const [workouts, setWorkouts] = useState([]);
+const BodyParts = (props)=> {
+    const [bodyparts, setBodyPart] = useState([]);
     var user = "anonymouse";
      useEffect(  ()=>{
         const get = async()=>{
-            //TODO get bodypart from url path
-            await props.getWorkouts("chest");
+            
+            await props.getBodyParts();
             // let data = await result;
             // setWorkouts(data);
         }
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
     if(helpers.checkIfLoggedIn(props.user)){
-       if(!helpers.checkUndefinedOrNull(props.workouts) || !props.workouts.length>0){
+       if(!helpers.checkUndefinedOrNull(props.bodyparts) || !props.bodyparts.length>0){
             get();
        }
     }
@@ -37,50 +40,53 @@ const Workouts = (props)=> {
         user = props.user.username;
     }
     console.log(props)
-    return props.workouts.loading? (
+    return props.bodyparts.loading? (
         <div>
             <h3>Loading...</h3>
             
         </div>
-    )  : props.workouts.error ? (
-        <h3>{props.workouts.error}</h3>
+    )  : props.bodyparts.error ? (
+        <h3>{JSON.stringify(props.bodyparts.error)}</h3>
     ) :  (
        
         <div>
           {(()=>{
-              if(!helpers.checkUndefinedOrNull(props.workouts)|| props.workouts.length>0){
-                props.setWorkouts(props.workouts)
+              //TODO Remove this extra set local storage in other files like workouts too
+              if(!helpers.checkUndefinedOrNull(props.bodyparts)|| props.bodyparts.length>0){
+                // props.setBodyParts(props.bodyparts.data)
               }
           })()}
-        <h3>Workouts</h3>
-        <p>hey, {user} Here are some workouts that you might like</p>
-       
-        <pre>{JSON.stringify(props.workouts)}</pre>
+        <h3>Body Parts</h3>
+        <p>hey, {user} Here are some BodyParts You can Choose From that you might like</p>
+          
+        <pre>{JSON.stringify(props.bodyparts)}</pre>
         </div>
     );
-    
+    //TODO Make body parts clickable and send to workouts page 
 }
 
 const mapStateToProps = state => {
     console.log(state)
     return {
-        workouts:state.workouts,
+        //here we are changing the name of the state property because we didnt create a seperate
+        //reducer action to make things easier
+        bodyparts:state.workouts,
         user: state.user
     }
 } 
 const mapDispatchToProps =  (dispatch) => {
    
         return {
-            getWorkouts:  bodyPart =>
-              dispatch( actions.GetWorkout(bodyPart)),
+            getBodyParts:  () =>
+              dispatch( actions.GetBodyParts()),
             getUser: ()=>{
                 dispatch(userActions.GetUser())
             },
-            setWorkouts: workouts => WorkoutService.setTargetWorkout({
-                workouts
-            })
+            setBodyParts: (data) => WorkoutService.setDynamics(
+           "bodyParts",data,false
+            )
         }
    
     }
-const wrappedWorkouts = connect(mapStateToProps,mapDispatchToProps)(Workouts);
-export default wrappedWorkouts;
+const wrappedBodyParts = connect(mapStateToProps,mapDispatchToProps)(BodyParts);
+export default wrappedBodyParts;

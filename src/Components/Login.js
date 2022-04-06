@@ -11,7 +11,7 @@ const Login = (props)=>{
     helpers.checkUser(props.user,props.getUser)
           
     if(helpers.checkIfLoggedIn(props.user)){
-        console.log(props.user);
+        console.log(props);
         return (
             <div>
                 

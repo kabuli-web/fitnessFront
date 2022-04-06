@@ -4,12 +4,13 @@ import * as helpers from "../helpers/helpers.js"
 let WorkoutService = (()=>{
 
     var getWorkoutsByBodyPart = function (bodyPart){
+        console.log("local storage service ran")
         let workouts = JSON.parse(localStorage.getItem("workouts"));
         if(workouts===null){
             return null;
         }
         let result = [];
-        if((bodyPart===null || bodyPart===undefined) && workouts!==null ){
+        if(!(bodyPart===null || bodyPart===undefined) && workouts!==null ){
             return workouts;
         }
         workouts.forEach(element=>{
@@ -24,21 +25,23 @@ let WorkoutService = (()=>{
     }
 
     var setBodyPartWorkout = function(data){
-        let bodyparts = JSON.parse(localStorage.getItem("workouts"));
+        let bodyparts = getDynamic("workouts");
         let exists =false;
-        if(bodyparts===null || bodyparts===undefined){
+        if(bodyparts===null || bodyparts===undefined || bodyparts.length===0  ){
             bodyparts = []
        }else{
         
          bodyparts.forEach(element => {
-          data.forEach(ele=>{
-            if(element.bodypart===ele.bodyPart){
+          
+            if(element.bodypart===data[0].bodyPart){
                 exists=true;
                 return;
                 }
-          })
+         
         });
         }
+       
+        //TODO Continue Here
         if(exists){
             return {
               succeed: false,
@@ -46,15 +49,37 @@ let WorkoutService = (()=>{
             }
            }
           if(!exists){
-            
-            localStorage.setItem('workouts',JSON.stringify(data)) 
+              //TODO CODE DOESNT WORK
+             setDynamics("workouts",data,true)
           }
 
     }
-    
+    var getDynamic = function(dynamicName,){
+        console.log("local storage service ran")
+        let dynamics = JSON.parse(localStorage.getItem(dynamicName));
+        if(dynamics===null){
+            return null;
+        }
+        return dynamics;
+    }
+    var setDynamics = function(dynamicName,data,append){
+        console.log("dynamic set ran" )
+        let dynamics = JSON.parse(localStorage.getItem(dynamicName));
+        if(append){
+            data.forEach(element=>{
+                dynamics.push(element);
+            })
+          localStorage.setItem(dynamicName,JSON.stringify(dynamics)) 
+       
+        }else{
+          localStorage.setItem(dynamicName,JSON.stringify(data)) 
+        }
+    }
     return {
         getWorkouts: getWorkoutsByBodyPart,
-        setTargetWorkout:setBodyPartWorkout
+        setTargetWorkout:setBodyPartWorkout,
+        getDynamic:getDynamic,
+        setDynamics:setDynamics
     }
 })();
 export default WorkoutService;

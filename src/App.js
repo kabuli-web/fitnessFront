@@ -8,7 +8,7 @@ import Register from './Components/Register'
 import CreatePlan from './Components/CreatePlan'
 import CreateGoal from './Components/CreateGoal'
 import Workouts from './Components/Workouts'
-
+import BodyParts from "./Components/BodyParts"
 
 
 import React from "react"
@@ -24,7 +24,7 @@ const App = (props)=>{
         <Route path="/CreatePlan" history={props.history} component={CreatePlan}/>
         <Route path="/CreateGoal" history={props.history} component={CreateGoal}/>
         <Route path="/Workouts" history={props.history} component={Workouts}/>
-        
+        <Route path="/BodyParts" history={props.history} component={BodyParts}/>
       </Switch>
     </div>
   );

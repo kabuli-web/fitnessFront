@@ -11,8 +11,7 @@ const CreateGoal =(props)=> {
     const [currentPage,setPage]= useState("");
     helpers.checkUser(props.user,props.getUser);
     user = props.user;
-    console.log(props)
-    console.log(props.user)
+    
     if(!helpers.checkIfLoggedIn(props.user)){
         console.log(props.user);
         return  <Redirect to="/Login"/>

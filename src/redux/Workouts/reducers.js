@@ -4,19 +4,19 @@ import * as actionTypes from "./type.js"
 export const WokoutsReducer =  (state = [], action) =>{ 
             switch (action.type){
 
-                case actionTypes.RequestWorkouts:
+                case actionTypes.RequestInitiated:
                     return {
                         // ...state,
                         loading:true
                     }
-                case actionTypes.GetWorkoutsSucceeded:
+                case actionTypes.RequestSucceeded:
                     return {
-                        workouts:action.payload,
+                        data:action.payload,
                         loading:false
                     }
-                case actionTypes.GetWorkoutsFailed:
+                case actionTypes.RequestFailed:
                     return {
-                        workouts:[],
+                        data:[],
                         loading:false,
                         error:action.payload
                     }
