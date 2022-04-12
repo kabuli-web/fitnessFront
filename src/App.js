@@ -23,7 +23,7 @@ const App = (props)=>{
         <Route path="/Register" history={props.history} component={Register}/>
         <Route path="/CreatePlan" history={props.history} component={CreatePlan}/>
         <Route path="/CreateGoal" history={props.history} component={CreateGoal}/>
-        <Route path="/Workouts" history={props.history} component={Workouts}/>
+        <Route path="/Workouts/:bodyPart" history={props.history} component={Workouts}/>
         <Route path="/BodyParts" history={props.history} component={BodyParts}/>
       </Switch>
     </div>

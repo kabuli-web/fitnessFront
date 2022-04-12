@@ -10,10 +10,14 @@ import WorkoutService from "../LocalStorageServices/WorkoutServices";
 const Workouts = (props)=> {
     const [workouts, setWorkouts] = useState([]);
     var user = "anonymouse";
+    props.history.goBack = ()=>{
+        props.history.push("/BodyParts")
+    }
+    // console.log(props.)
      useEffect(  ()=>{
         const get = async()=>{
             //TODO get bodypart from url path
-            await props.getWorkouts("chest");
+            await props.getWorkouts(props.match.params.bodyPart);
             // let data = await result;
             // setWorkouts(data);
         }

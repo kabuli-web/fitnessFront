@@ -9,10 +9,12 @@ import * as actions from "../redux/Workouts/actions"
 import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
 import WorkoutService from "../LocalStorageServices/WorkoutServices";
+import {Link} from 'react-router-dom'
 
 const BodyParts = (props)=> {
     const [bodyparts, setBodyPart] = useState([]);
     var user = "anonymouse";
+   
      useEffect(  ()=>{
         const get = async()=>{
             
@@ -23,8 +25,13 @@ const BodyParts = (props)=> {
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
     if(helpers.checkIfLoggedIn(props.user)){
-       if(!helpers.checkUndefinedOrNull(props.bodyparts) || !props.bodyparts.length>0){
+       if(!helpers.checkUndefinedOrNull(props.bodyparts?.data) || props.bodyparts?.data.length >15|| !props.bodyparts?.data.length>0){
+        console.log("i ran ")   
+        try {
             get();
+           } catch (error) {
+               console.log(error)
+           }
        }
     }
     },[])
@@ -47,7 +54,7 @@ const BodyParts = (props)=> {
         </div>
     )  : props.bodyparts.error ? (
         <h3>{JSON.stringify(props.bodyparts.error)}</h3>
-    ) :  (
+    ) : helpers.checkUndefinedOrNull(props.bodyparts?.data) && props.bodyparts?.data.length<15? (
        
         <div>
           {(()=>{
@@ -59,9 +66,24 @@ const BodyParts = (props)=> {
         <h3>Body Parts</h3>
         <p>hey, {user} Here are some BodyParts You can Choose From that you might like</p>
           
-        <pre>{JSON.stringify(props.bodyparts)}</pre>
+        
+       <div>
+       <h4>{
+          props.bodyparts.data.map(element=>(
+            <pre>
+               <Link to={`/Workouts/${element}`}>{element}</Link>
+            </pre>
+        ))
+            
+          }</h4>
+       </div>
         </div>
-    );
+    ):(
+<div>
+<pre>{JSON.stringify(props.bodyparts)}</pre>
+<h4>didnt work</h4>
+</div>
+    )
     //TODO Make body parts clickable and send to workouts page 
 }
 

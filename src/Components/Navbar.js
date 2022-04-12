@@ -10,12 +10,12 @@ const Navbar = props =>{
     helpers.checkUser(props.user,props.getUser);
     user = props.user;
     if(!helpers.checkIfLoggedIn(props.user)){
-        console.log(props.user);
+        
         loginLinkTitle = "Login"
     }else{
         loginLinkTitle = "My Profile"
     }
-        console.log(user)
+       
         return (
                 <nav className="navbar navbar-expand-md navbar-light bg-light" >
                      <div className="container">
@@ -28,8 +28,9 @@ const Navbar = props =>{
                             <li className="nav-item">
                                <Link to="/Home" className="nav-link">Home</Link>
                             </li>
+                            
                             <li className="nav-item">
-                               <Link to="/Workouts" className="nav-link">Workouts</Link>
+                               <Link to="/BodyParts" className="nav-link">Browse Workouts</Link>
                             </li>
                             <li class="nav-item">
                                <Link to="/Login" className="nav-link">{loginLinkTitle}</Link>

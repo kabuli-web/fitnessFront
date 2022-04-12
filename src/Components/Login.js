@@ -11,19 +11,19 @@ const Login = (props)=>{
     helpers.checkUser(props.user,props.getUser)
           
     if(helpers.checkIfLoggedIn(props.user)){
-        console.log(props);
+        
         return (
-            <div>
+            
                 
                 <UserProfile history={props.history} />
-            </div>
+            
         )
     }
     return (
-        <div>
+       
              
-                <LoginBox history={props.history} />
-        </div>
+             <LoginBox history={props.history} />
+        
     );
 }
 const mapStateToProps = state => {

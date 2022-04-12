@@ -1,13 +1,19 @@
 import * as actionTypes from "./type.js"
 import UserServices from "../../LocalStorageServices/UserServices.js";
-
+import * as helpers from "../../helpers/helpers.js"
 const user= UserServices.getUserData();
 
 function loginUserToApi(user){
     if(user.username ==="kabuli" && user.password === "123"){
-        return {
-            username: user.username
-        };
+        var progress = UserServices.getUserData();
+        console.log(progress)
+        if(helpers.checkUndefinedOrNull(progress)){
+            progress.username = user.username;
+            return progress;
+        }else{
+            return {username:user.username};
+        }
+        
     }else{
         return {error:"wrong password"};
     }
@@ -28,8 +34,16 @@ export const userAuth = (state = user, action) =>{
                         return result;
                     }
                 case actionTypes.LogoutUser:
-                    UserServices.setUserData({});
-                    state = {}
+                    var progress = UserServices.getUserData();
+                   
+                    var res ={};
+                    if(helpers.checkUndefinedOrNull(progress)){
+                        progress.username = undefined;
+                        res = progress; 
+                    }
+                    console.log(res)
+                    UserServices.setUserData(res)
+                    state = res
                     return state;
                 case actionTypes.GetUser:
                     return UserServices.getUserData();
