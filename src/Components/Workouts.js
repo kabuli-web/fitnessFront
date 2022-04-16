@@ -9,6 +9,20 @@ import WorkoutService from "../LocalStorageServices/WorkoutServices";
 
 const Workouts = (props)=> {
     const [workouts, setWorkouts] = useState([]);
+    const [equipment, setEquipment] = useState("Choose an equipment");
+    function getUnique(arr, index) {
+
+        const unique = arr
+             .map(e => e[index])
+      
+             // store the keys of the unique objects
+             .map((e, i, final) => final.indexOf(e) === i && i)
+      
+             // eliminate the dead keys & store unique objects
+            .filter(e => arr[e]).map(e => arr[e]);      
+      
+         return unique;
+      }
     var user = "anonymouse";
     props.history.goBack = ()=>{
         props.history.push("/BodyParts")
@@ -24,14 +38,13 @@ const Workouts = (props)=> {
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
     if(helpers.checkIfLoggedIn(props.user)){
-       if(!helpers.checkUndefinedOrNull(props.workouts) || !props.workouts.length>0){
+       if(!helpers.checkUndefinedOrNull(props.workouts?.data) ||!helpers.checkUndefinedOrNull(props.workouts.data[0].equipment) || !props.workouts.length>0){
             get();
        }
     }
     },[])
-    
     helpers.checkUser(props.user,props.getUser)
-   
+    
     if(!helpers.checkIfLoggedIn(props.user)){
     console.log(props.user);
     return <Redirect to="/Login"/>
@@ -48,20 +61,81 @@ const Workouts = (props)=> {
         </div>
     )  : props.workouts.error ? (
         <h3>{props.workouts.error}</h3>
-    ) :  (
+    ) : helpers.checkUndefinedOrNull(props.workouts?.data)&& helpers.checkUndefinedOrNull(props.workouts.data[0].equipment) && props.workouts.data.length>0 ? (
        
         <div>
           {(()=>{
-              if(!helpers.checkUndefinedOrNull(props.workouts)|| props.workouts.length>0){
+
+              if(!helpers.checkUndefinedOrNull(props.workouts) || props.workouts.length>0){
                 props.setWorkouts(props.workouts)
               }
           })()}
         <h3>Workouts</h3>
         <p>hey, {user} Here are some workouts that you might like</p>
-       
-        <pre>{JSON.stringify(props.workouts)}</pre>
+       <div className="conatainer-fluid w-100">
+           <div className="row w-100">
+           <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {equipment}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      {
+         getUnique( props.workouts.data,"equipment").map(wrk=>(
+            <li  role="button"  className="dropdown-item" onClick={()=>{
+                setEquipment(wrk.equipment)
+            }}>{wrk.equipment}</li>
+         ))
+
+
+
+        //   props.workouts.data.filter(element=>element.equipment.includes(equipment==="Choose an equipment"?"":equipment)).map(workout=>(
+        //     <li>{workout.equipment}</li>
+        //   ))
+      }
+    
+  </ul>
+</div>
+           </div>
+           <div className="row mx-auto align-items-top justify-content-start">
+               { props.workouts.data.filter(element=>element.equipment.includes(equipment==="Choose an equipment"?"":equipment)).map(element=>(  
+               <div className="col d-flex flex-column align-items-center ">
+               {
+               
+                <div className="card" style={{
+                    width:"300px"
+                }} >
+                       <img className="card-img-top" style={{
+                        width:"100px",
+                        height:"100px"
+                    }} src={`${element.gifUrl}`} alt="" />
+                   <div className="card-body">
+                  
+               <h4 className="card-title">
+              
+              {element.name}
+          
+          </h4>
+                   <p className="card-text">
+                   
+                   {element.equipment}
+              
+               </p>
+            
+                   </div>
+                </div>
+             
+           }
+               </div>
+                 ))}
+           </div>
+       </div>
         </div>
-    );
+    ):(
+        <div>
+        <pre>{JSON.stringify(props.bodyparts)}</pre>
+        <h4>didnt work</h4>
+        </div>
+            )
     
 }
 

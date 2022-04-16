@@ -32,6 +32,11 @@ const Navbar = props =>{
                             <li className="nav-item">
                                <Link to="/BodyParts" className="nav-link">Browse Workouts</Link>
                             </li>
+
+                            <li className="nav-item">
+                               <Link to="/RecipeCategories" className="nav-link">Browse Recipes</Link>
+                            </li>
+
                             <li class="nav-item">
                                <Link to="/Login" className="nav-link">{loginLinkTitle}</Link>
                             </li>

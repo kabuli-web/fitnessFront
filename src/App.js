@@ -9,6 +9,10 @@ import CreatePlan from './Components/CreatePlan'
 import CreateGoal from './Components/CreateGoal'
 import Workouts from './Components/Workouts'
 import BodyParts from "./Components/BodyParts"
+import FoodTypes from "./Components/FoodTypes"
+import Recipes from "./Components/Recipes"
+
+
 
 
 import React from "react"
@@ -25,6 +29,8 @@ const App = (props)=>{
         <Route path="/CreateGoal" history={props.history} component={CreateGoal}/>
         <Route path="/Workouts/:bodyPart" history={props.history} component={Workouts}/>
         <Route path="/BodyParts" history={props.history} component={BodyParts}/>
+        <Route path="/RecipeCategories" history={props.history} component={FoodTypes}/>
+        <Route path="/Recipes/:foodType" history={props.history} component={Recipes}/>
       </Switch>
     </div>
   );

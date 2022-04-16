@@ -54,10 +54,10 @@ var UserServices = (function() {
           error:"please Enter You Weight And Height in the correct form"
         }
       }
-      if(user.progress===null || user.progress===undefined ){
+      
         user.progress = progress;
         
-      }
+      
       localStorage.setItem("userData",JSON.stringify(user));
       return {
         succeed:true,
