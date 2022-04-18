@@ -27,7 +27,7 @@ export const checkUser = (user,getUserFunction)=>{
 }
 
 export const checkUndefinedOrNull = (item,child = "")=>{
-    if(item===null || item ===undefined || item==='' || child === undefined){
+    if(item===null || item ===undefined || item==='' || child === undefined || item==={}){
         return false;
     }
     return true;

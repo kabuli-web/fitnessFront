@@ -65,6 +65,9 @@ let WorkoutService = (()=>{
     var setDynamics = function(dynamicName,data,append){
         console.log("dynamic set ran" )
         let dynamics = JSON.parse(localStorage.getItem(dynamicName));
+        if(!helpers.checkUndefinedOrNull(dynamics)){
+            dynamics = []
+        }
         if(append){
             data.forEach(element=>{
                 dynamics.push(element);

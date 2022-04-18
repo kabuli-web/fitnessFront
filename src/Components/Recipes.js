@@ -1,15 +1,27 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 
 import {connect} from "react-redux";
 import { Redirect } from 'react-router';
 import * as actions from "../redux/Recipes.js/actions"
 import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
-import {Link} from 'react-router-dom'
+import $ from 'jquery';
+import popUp from "./PopUp";
+
 
 const Recipes = (props)=> {
    
+    const [OpenedRecipe,setOpenedRecipe]= useState({});
+    const [popUpOpen,setPopUpOpen]= useState(false);
     
+    function getData(data){
+        console.log(data)
+        if(!helpers.checkUndefinedOrNull(data)){
+           return "Not Found";
+        }else{
+            return data;
+        }
+    }
     var user = "anonymouse";
     props.history.goBack = ()=>{
         props.history.push("/RecipeCategories")
@@ -25,11 +37,11 @@ const Recipes = (props)=> {
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
     if(helpers.checkIfLoggedIn(props.user)){
-       if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes.length>0){
+       if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes.data.length>0){
             get();
        }
     }
-    },[])
+    },[OpenedRecipe])
     helpers.checkUser(props.user,props.getUser)
     
     if(!helpers.checkIfLoggedIn(props.user)){
@@ -66,12 +78,8 @@ const Recipes = (props)=> {
            <div className="row mx-auto align-items-top justify-content-start">
                { props.recipes.data.map(element=>(  
                <div className="col d-flex flex-column align-items-center ">
-               <Link  to={`/Recipes/Details/${element["tracking-id"]}`} style={{
-                   textDecoration: 'none',
-                   color:"black",textAlign:"center",
-                   margin:"5px 0px"
-               }} >
-                   <div className="card" style={{
+               
+                   <div  className="card" style={{
                     width:"300px",
                    
                     objectFit:"cover"
@@ -90,17 +98,33 @@ const Recipes = (props)=> {
           </h4>
                    <p className="card-text">
                    
-                   {element.content.description.text}
+                   {(()=>{
+                       if(!helpers.checkUndefinedOrNull(element.content?.description?.text)){
+                            return "Not Found";
+                       }else{
+                        return element.content.description.text;
+                       }
+                   })()}
               
                </p>
-            
+               <button onClick={()=>{
+                setOpenedRecipe( element);
+                setPopUpOpen( true);
+               }} type="button" className="btn btn-primary"  >
+   View Details
+  </button>
                    </div>
                 </div>
-               </Link>
+            
                </div>
                  ))}
            </div>
        </div>
+       {
+           popUp({recipe:OpenedRecipe,popUpOpen:popUpOpen,setFunction:()=>{
+            setPopUpOpen(false)
+           }}) 
+      }
         </div>
             
        
