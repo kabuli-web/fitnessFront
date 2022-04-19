@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import { Redirect } from 'react-router';
 import * as helpers from "../helpers/helpers.js"
 import PopUp from "./PopUp.js";
+import recipeObject from "./recipeDummyObject.json"
 const Home =(props)=> {
     var user = "anonymouse";
     if(props.user!==undefined && props.user!==null && props.user.username!==undefined ){
@@ -25,7 +26,9 @@ const Home =(props)=> {
                 <h3>Home</h3>
                 <p>hello there {user}</p>
                 <div className="Container-fluid">
-                {PopUp(props)}
+                {PopUp({recipe:recipeObject,popUpOpen:true,setFunction:()=>{
+           console.log("tipo")
+           }}) }
       
   </div>
                 </div>

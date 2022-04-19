@@ -105,8 +105,7 @@ const Workouts = (props)=> {
                     width:"300px"
                 }} >
                        <img className="card-img-top" style={{
-                        width:"100px",
-                        height:"100px"
+                        width:"100%"
                     }} src={`${element.gifUrl}`} alt="" />
                    <div className="card-body">
                   

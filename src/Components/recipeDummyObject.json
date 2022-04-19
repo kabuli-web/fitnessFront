@@ -1,0 +1,1583 @@
+{
+    "display": {
+        "displayName": "Lemon Rosemary Roasted Turkey",
+        "images": [
+            "https://lh3.googleusercontent.com/0LOVE07z1pXo_wrN2WFEC556DdYV9n9bMXK4XsZ1tjfHmmDnX9MGPWqeUT2l-z-69vuIOq2yXu8ejZRs1JqCeg"
+        ],
+        "flag": "",
+        "source": {
+            "sourceRecipeUrl": "https://www.yummly.com/private/recipe/Lemon-Rosemary-Roasted-Turkey-2465570?layout=prep-steps",
+            "sourceFaviconUrl": null,
+            "sourceHttpsOk": false,
+            "sourceInFrame": true,
+            "sourceDisplayName": "Yummly",
+            "proSource": null,
+            "sourceSiteUrl": "https://www.yummly.com/page/yummly",
+            "introVideo": {
+                "id": null,
+                "originalUrl": null,
+                "hlsUrl": null,
+                "dashUrl": null,
+                "hasAudio": null,
+                "snapshot": {
+                    "original": null,
+                    "resizable": null
+                }
+            },
+            "eyebrowText": null,
+            "sourcePageUrl": "yummly",
+            "marketingCopy": null,
+            "sourceHttpOk": false,
+            "marketingImage": null
+        },
+        "profiles": [
+            {
+                "profileName": "a630f43c-604c-4c6e-a8f6-64c76e3246cc",
+                "displayName": "Yummly",
+                "siteUrl": "https://www.yummly.com/page/yummly??",
+                "pictureUrl": "https://s.yumm.ly/profile/yum-button.png",
+                "pageUrl": "yummly",
+                "description": "Solving the daily dinner dilemma",
+                "type": "content-owner",
+                "profileUrl": "https://www.yummly.com/page/yummly"
+            }
+        ],
+        "displayPrepStepsInline": true,
+        "collections": []
+    },
+    "type": "single recipe",
+    "promoted": false,
+    "proRecipe": false,
+    "recipeType": [
+        "GuidedRecipe",
+        "YummlyOriginal"
+    ],
+    "tracking-id": "recipe:Lemon-Rosemary-Roasted-Turkey-2465570,recipe,other.guided,list.recipe.other.guided",
+    
+    "content": {
+        "description": {
+            "mobileSectionName": "Description",
+            "text": "Your guests will rave over the delicious yet simple flavor of this lemon rosemary roasted turkey. The recipe is a Yummly original created by [Sara Mellas](https://www.yummly.com/dish/author/Sara%20Mellas).",
+            "shortText": null
+        },
+        "urbSubmitters": [],
+        "tags": {
+            "course": [
+                {
+                    "display-name": "Main Dishes",
+                    "tag-url": "course^course-Main Dishes"
+                }
+            ],
+            "holiday": [
+                {
+                    "display-name": "Thanksgiving",
+                    "tag-url": "holiday^holiday-thanksgiving"
+                }
+            ],
+            "technique": [
+                {
+                    "display-name": "Roasting",
+                    "tag-url": "technique^technique-roasting"
+                }
+            ]
+        },
+        "preparationSteps": [
+            "Preheat the oven to 350°F. Adjust a rack to the lowest position in the oven.",
+            "Line a roasting pan with aluminum foil and position a roasting rack inside of it.",
+            "Liberally season the turkey with the salt and black pepper, taking care to season the outside as well as the internal cavity. Set the turkey breast side up onto the roasting rack and tuck the wing tips underneath the body.",
+            "Remove the leaves from 2 stems of rosemary and finely mince. Reserve the remainder of the bunch.",
+            "Place the softened butter and olive oil in a medium bowl. Add the minced rosemary, the zest of both lemons, and the garlic powder. Stir vigorously with a fork until the mixture is mostly combined. It is okay if some lumps of butter remain.",
+            "Smash the garlic cloves with a back of a knife and discard the papery skins. Cut the lemons in half. Place the garlic, lemons, and rosemary in the cavity of the turkey.",
+            "With clean hands, rub the lemon-rosemary butter all over the surface of the turkey, and under the breast skin.",
+            "Pour enough chicken broth into the roasting pan to rise 1/2 inch up the sides of the pan.",
+            "Roast the turkey on lowest rack of oven until the thickest part of the breast or leg reaches an internal temperature of 165°F, 2-3 1/2 hours, depending on its weight. Rotate the pan halfway through the cooking time.",
+            "Check to see that turkey is done. Remove from oven or add time as needed.",
+            "Allow the turkey to rest on the roasting rack for 30 minutes. Transfer the turkey to a cutting board. Carve as desired, and serve."
+        ],
+        "videos": {
+            "snapshotUrl": "https://gv.yummlystatic.com/6487c863-2b54-4337-8d29-1042dae4ecc3/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+            "videoUrls": {
+                "ios": "https://gv.yummlystatic.com/6487c863-2b54-4337-8d29-1042dae4ecc3/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                "android": "https://gv.yummlystatic.com/6487c863-2b54-4337-8d29-1042dae4ecc3/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+            },
+            "videoDetails": {
+                "ios": [
+                    {
+                        "videoTypeCode": "step-montage",
+                        "videoUrl": "https://gv.yummlystatic.com/6487c863-2b54-4337-8d29-1042dae4ecc3/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                        "hasAudio": false
+                    }
+                ],
+                "android": [
+                    {
+                        "videoTypeCode": "step-montage",
+                        "videoUrl": "https://gv.yummlystatic.com/6487c863-2b54-4337-8d29-1042dae4ecc3/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey/dash.mpd",
+                        "hasAudio": false
+                    }
+                ]
+            },
+            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/DdNmLHj5TDyZjnY1Gbz3_Montage_Lemon_Rosemary_Roasted_Turkey.mp4",
+            "createTime": "2021-02-25T18:21:12Z"
+        },
+        "moreContent": {
+            "mobileSectionName": "More From Yummly",
+            "queryParams": {
+                "start": 0,
+                "authorId": "Yummly",
+                "id": "Lemon-Rosemary-Roasted-Turkey-2465570",
+                "apiFeedType": "moreFrom"
+            },
+            "feed": []
+        },
+        "tagsAds": {
+            "adtag": [
+                {
+                    "display-name": "adtag thanksgiving",
+                    "tag-url": "adtag^adtag-thanksgiving"
+                },
+                {
+                    "display-name": "adtag main",
+                    "tag-url": "adtag^adtag-Main Dishes"
+                },
+                {
+                    "display-name": "adtag christmas",
+                    "tag-url": "adtag^adtag-christmas"
+                }
+            ]
+        },
+        "details": {
+            "directionsUrl": "https://www.yummly.com/private/recipe/Lemon-Rosemary-Roasted-Turkey-2465570?layout=prep-steps",
+            "totalTime": "4 Hr 0 Min",
+            "displayName": "Yummly",
+            "images": [
+                {
+                    "hostedLargeUrl": "https://lh3.googleusercontent.com/DSk0l2mYgvYm7V311WK8h74jC3WxP0mfAA9ZEG_sV1u5NfRr10ZV8dWhpy_d7sAKCHNkvx4FCB9k_tFwOWlFCQ=s360",
+                    "resizableImageUrl": "https://lh3.googleusercontent.com/0LOVE07z1pXo_wrN2WFEC556DdYV9n9bMXK4XsZ1tjfHmmDnX9MGPWqeUT2l-z-69vuIOq2yXu8ejZRs1JqCeg",
+                    "resizableImageHeight": 1080,
+                    "resizableImageWidth": 1920
+                }
+            ],
+            "name": "Lemon Rosemary Roasted Turkey",
+            "keywords": [
+                "turkey",
+                "whole roasted turkey",
+                "roasted turkey",
+                "roast whole turkey",
+                "whole turkey",
+                "rosemary turkey",
+                "thanksgiving turkey",
+                "turkey seasoning rub",
+                "roasting turkey",
+                "turkey rub",
+                "oven roasted turkey",
+                "thanksgiving",
+                "turkey lemon",
+                "roasted turkey legs",
+                "a lemon pepper turkey",
+                "thanksgiving side",
+                "turkey roasting",
+                "turkey seasoning",
+                "12 lb turkey recipe",
+                "turkey roast"
+            ],
+            "brand": null,
+            "id": "Lemon-Rosemary-Roasted-Turkey-2465570",
+            "attribution": {
+                "html": "<a href='http://www.yummly.com/recipe/Lemon-Rosemary-Roasted-Turkey-2465570'>Lemon Rosemary Roasted Turkey recipe</a> information powered by <img src='http://static.yummly.com/api-logo.png'/>",
+                "url": "http://www.yummly.com/recipe/Lemon-Rosemary-Roasted-Turkey-2465570",
+                "text": "Lemon Rosemary Roasted Turkey recipes: information powered by Yummly",
+                "logo": "http://static.yummly.com/api-logo.png"
+            },
+            "recipeId": "af957601-7834-4bfe-bef6-4bb16ab6b1a6",
+            "numberOfServings": 9,
+            "globalId": "2649c40d-94ce-4e16-89a4-c65c286135e0",
+            "totalTimeInSeconds": 14400,
+            "rating": 3
+        },
+        "relatedContent": {
+            "mobileSectionName": "Related",
+            "queryParams": {
+                "start": 0,
+                "apiFeedType": "related",
+                "id": "recipe:Lemon-Rosemary-Roasted-Turkey-2465570"
+            },
+            "feed": []
+        },
+        "ingredientLines": [
+            {
+                "category": "Meat",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "d3b63bce-fa9e-102c-a985-0030485841f8",
+                            "name": "whole",
+                            "abbreviation": "whole",
+                            "plural": "whole",
+                            "pluralAbbreviation": "whole",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 1
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "d3b63bce-fa9e-102c-a985-0030485841f8",
+                            "name": "whole",
+                            "abbreviation": "whole",
+                            "plural": "whole",
+                            "pluralAbbreviation": "whole",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 1
+                    }
+                },
+                "unit": "whole",
+                "ingredientId": "7a1a0115-bc89-4db5-a6ed-876e614b361f",
+                "categoryId": "40ea353d-0dfc-4f8c-bf09-be73af9bd78e",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "turkey"
+                    }
+                ],
+                "ingredient": "turkey",
+                "id": "479849e0-9ab2-4643-9b2d-fdcaab147af5",
+                "remainder": "11-14 lb., giblets removed, patted dry",
+                "quantity": 1,
+                "wholeLine": "1 whole turkey (11-14 lb., giblets removed, patted dry)"
+            },
+            {
+                "category": "Baking & Cooking",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 1.5
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 1.5
+                    }
+                },
+                "unit": "tablespoon",
+                "ingredientId": "e01cac82-90ba-4267-8201-4d4d16332fb4",
+                "categoryId": "48481730-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "salt"
+                    }
+                ],
+                "ingredient": "salt",
+                "id": "3e2a4196-8128-413a-b5b2-235302f48c56",
+                "remainder": "",
+                "quantity": 1.5,
+                "wholeLine": "1-1 1/2 Tbsp. salt"
+            },
+            {
+                "category": "Baking & Cooking",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                            "name": "",
+                            "abbreviation": "",
+                            "plural": "",
+                            "pluralAbbreviation": "",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": null
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                            "name": "",
+                            "abbreviation": "",
+                            "plural": "",
+                            "pluralAbbreviation": "",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": null
+                    }
+                },
+                "unit": "",
+                "ingredientId": "30b7a1fc-9c68-43e8-8bf8-1a0d83aa1788",
+                "categoryId": "48481730-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "black pepper"
+                    }
+                ],
+                "ingredient": "black pepper",
+                "id": "60e8ef10-e1bf-49c1-a8c6-669af7f9b7e3",
+                "remainder": "to taste",
+                "quantity": null,
+                "wholeLine": "Black pepper"
+            },
+            {
+                "category": "Produce",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "124631f4-6e69-102c-9a8a-0030485841f8",
+                            "name": "bunch",
+                            "abbreviation": "bunch",
+                            "plural": "bunches",
+                            "pluralAbbreviation": "bunches",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 1
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "124631f4-6e69-102c-9a8a-0030485841f8",
+                            "name": "bunch",
+                            "abbreviation": "bunch",
+                            "plural": "bunches",
+                            "pluralAbbreviation": "bunches",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 1
+                    }
+                },
+                "unit": "bunch",
+                "ingredientId": "b7f74797-5d70-424b-9e07-e45a0c546c49",
+                "categoryId": "48480f6a-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "fresh rosemary"
+                    }
+                ],
+                "ingredient": "fresh rosemary",
+                "id": "09d1bf8a-1073-4e78-b76f-2e100ad6819f",
+                "remainder": "",
+                "quantity": 1,
+                "wholeLine": "1 bunch fresh rosemary"
+            },
+            {
+                "category": "Dairy",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    }
+                },
+                "unit": "tablespoon",
+                "ingredientId": "9ed78948-13d2-4a5f-9089-1685267e675c",
+                "categoryId": "d8efba0b-2538-4882-9298-7d8c4d175c5f",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "butter"
+                    }
+                ],
+                "ingredient": "butter",
+                "id": "1820f005-24bc-4cf0-b2fe-f3174756004f",
+                "remainder": "softened",
+                "quantity": 2,
+                "wholeLine": "2 Tbsp. butter (softened)"
+            },
+            {
+                "category": "Baking & Cooking",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                            "name": "tablespoon",
+                            "abbreviation": "Tbsp.",
+                            "plural": "tablespoons",
+                            "pluralAbbreviation": "Tbsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    }
+                },
+                "unit": "tablespoon",
+                "ingredientId": "6ea1b4fd-e6a0-4eec-ae75-2bba261ae482",
+                "categoryId": "48481730-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "extra-virgin olive oil"
+                    }
+                ],
+                "ingredient": "extra-virgin olive oil",
+                "id": "9f30b8ef-2c83-4afc-a83d-320682e79f7f",
+                "remainder": "",
+                "quantity": 2,
+                "wholeLine": "2 Tbsp. olive oil"
+            },
+            {
+                "category": "Produce",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                            "name": "",
+                            "abbreviation": "",
+                            "plural": "",
+                            "pluralAbbreviation": "",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                            "name": "",
+                            "abbreviation": "",
+                            "plural": "",
+                            "pluralAbbreviation": "",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    }
+                },
+                "unit": "",
+                "ingredientId": "13a1c71d-5174-435e-9f77-511a21bf2072",
+                "categoryId": "48480f6a-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "lemon"
+                    }
+                ],
+                "ingredient": "lemons",
+                "id": "f7aee375-b3ef-4a61-b0e3-f3310af2dabd",
+                "remainder": "large, zested",
+                "quantity": 2,
+                "wholeLine": "Zest of 2 large lemons"
+            },
+            {
+                "category": "Baking & Cooking",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "124afc0c-6e69-102c-9a8a-0030485841f8",
+                            "name": "teaspoon",
+                            "abbreviation": "tsp.",
+                            "plural": "teaspoons",
+                            "pluralAbbreviation": "tsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 0.5
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "124afc0c-6e69-102c-9a8a-0030485841f8",
+                            "name": "teaspoon",
+                            "abbreviation": "tsp.",
+                            "plural": "teaspoons",
+                            "pluralAbbreviation": "tsp.",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 0.5
+                    }
+                },
+                "unit": "teaspoon",
+                "ingredientId": "b804dccb-fed6-4d1d-aeed-98344a6ff62d",
+                "categoryId": "48481730-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "garlic powder"
+                    }
+                ],
+                "ingredient": "garlic powder",
+                "id": "c88179b6-a0b0-479d-9d48-d260427d1b99",
+                "remainder": "",
+                "quantity": 0.5,
+                "wholeLine": "1/2 tsp. garlic powder"
+            },
+            {
+                "category": "Produce",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "12485e2a-6e69-102c-9a8a-0030485841f8",
+                            "name": "head",
+                            "abbreviation": "head",
+                            "plural": "heads",
+                            "pluralAbbreviation": "heads",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 0.5
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "12485e2a-6e69-102c-9a8a-0030485841f8",
+                            "name": "head",
+                            "abbreviation": "head",
+                            "plural": "heads",
+                            "pluralAbbreviation": "heads",
+                            "kind": "count",
+                            "decimal": false
+                        },
+                        "quantity": 0.5
+                    }
+                },
+                "unit": "head",
+                "ingredientId": "d7adf64b-389a-466a-bb19-e4d8b9dabd26",
+                "categoryId": "48480f6a-6064-11e9-8647-d663bd873d93",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "garlic"
+                    }
+                ],
+                "ingredient": "garlic",
+                "id": "4869184e-570c-4eec-962a-b25e4c16fbf4",
+                "remainder": "",
+                "quantity": 0.5,
+                "wholeLine": "1/2 head of garlic"
+            },
+            {
+                "category": "Canned Goods & Soups",
+                "amount": {
+                    "metric": {
+                        "unit": {
+                            "id": "1248a146-6e69-102c-9a8a-0030485841f8",
+                            "name": "milliliter",
+                            "abbreviation": "ml",
+                            "plural": "milliliters",
+                            "pluralAbbreviation": "ml",
+                            "kind": "volume",
+                            "decimal": true
+                        },
+                        "quantity": 473
+                    },
+                    "imperial": {
+                        "unit": {
+                            "id": "1246463a-6e69-102c-9a8a-0030485841f8",
+                            "name": "cup",
+                            "abbreviation": "cup",
+                            "plural": "cups",
+                            "pluralAbbreviation": "cups",
+                            "kind": "volume",
+                            "decimal": false
+                        },
+                        "quantity": 2
+                    }
+                },
+                "unit": "cup",
+                "ingredientId": "84d88c20-d72e-4500-ba75-a94c419c58e1",
+                "categoryId": "715e568a-39d7-4317-ba69-4213a271fec7",
+                "relatedRecipeSearchTerm": [
+                    {
+                        "allowedIngredient": "chicken broth"
+                    }
+                ],
+                "ingredient": "chicken broth",
+                "id": "02c3d405-a236-4ea8-a7c9-38267f801691",
+                "remainder": "plus more as needed",
+                "quantity": 2,
+                "wholeLine": "2-3 cups chicken broth"
+            }
+        ],
+        "unitSystem": "imperial",
+        "reviews": {
+            "mobileSectionName": "Reviews",
+            "totalReviewCount": 0,
+            "averageRating": null,
+            "reviews": [],
+            "thisUserReview": null,
+            "sortBy": "create-time"
+        },
+        "relatedProducts": {
+            "mobileSectionName": "Essential Tools",
+            "queryParams": {
+                "start": 0,
+                "apiFeedType": "related",
+                "id": "recipe:Lemon-Rosemary-Roasted-Turkey-2465570",
+                "relatedContentType": "product"
+            },
+            "feed": []
+        },
+        "preparationStepCount": 11,
+        "nutrition": {
+            "mobileSectionName": "Nutrition",
+            "nutritionEstimates": [
+                {
+                    "attribute": "FAT_KCAL",
+                    "value": 460,
+                    "unit": {
+                        "name": "calorie",
+                        "abbreviation": "kcal",
+                        "plural": "calories",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 460,
+                        "unit": null,
+                        "percentDailyValue": null
+                    }
+                },
+                {
+                    "attribute": "K",
+                    "value": 1.58,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 1580,
+                        "unit": "mg",
+                        "percentDailyValue": 45
+                    }
+                },
+                {
+                    "attribute": "FASAT",
+                    "value": 13.17,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 13,
+                        "unit": "g",
+                        "percentDailyValue": 65
+                    }
+                },
+                {
+                    "attribute": "FE",
+                    "value": 0.01,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": null,
+                        "unit": null,
+                        "percentDailyValue": 35
+                    }
+                },
+                {
+                    "attribute": "SUGAR",
+                    "value": 0.02,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 0,
+                        "unit": "g",
+                        "percentDailyValue": null
+                    }
+                },
+                {
+                    "attribute": "FIBTG",
+                    "value": 1.6,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 2,
+                        "unit": "g",
+                        "percentDailyValue": 8
+                    }
+                },
+                {
+                    "attribute": "PROCNT",
+                    "value": 112.69,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 113,
+                        "unit": "g",
+                        "percentDailyValue": null
+                    }
+                },
+                {
+                    "attribute": "CHOCDF",
+                    "value": 4.31,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 4,
+                        "unit": "g",
+                        "percentDailyValue": 1
+                    }
+                },
+                {
+                    "attribute": "CHOLE",
+                    "value": 0.38,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 385,
+                        "unit": "mg",
+                        "percentDailyValue": 128
+                    }
+                },
+                {
+                    "attribute": "CA",
+                    "value": 0.11,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": null,
+                        "unit": null,
+                        "percentDailyValue": 10
+                    }
+                },
+                {
+                    "attribute": "VITA_IU",
+                    "value": 139.02,
+                    "unit": {
+                        "name": "IU",
+                        "abbreviation": "IU",
+                        "plural": "IU",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": null,
+                        "unit": null,
+                        "percentDailyValue": 4
+                    }
+                },
+                {
+                    "attribute": "ENERC_KCAL",
+                    "value": 956.62,
+                    "unit": {
+                        "name": "calorie",
+                        "abbreviation": "kcal",
+                        "plural": "calories",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 960,
+                        "unit": null,
+                        "percentDailyValue": null
+                    }
+                },
+                {
+                    "attribute": "VITC",
+                    "value": 0.02,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": null,
+                        "unit": null,
+                        "percentDailyValue": 30
+                    }
+                },
+                {
+                    "attribute": "FAT",
+                    "value": 50.63,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 51,
+                        "unit": "g",
+                        "percentDailyValue": 78
+                    }
+                },
+                {
+                    "attribute": "NA",
+                    "value": 1.58,
+                    "unit": {
+                        "name": "gram",
+                        "abbreviation": "g",
+                        "plural": "grams",
+                        "decimal": true
+                    },
+                    "display": {
+                        "value": 1580,
+                        "unit": "mg",
+                        "percentDailyValue": 66
+                    }
+                }
+            ]
+        },
+        "yums": {
+            "count": 617,
+            "this-user": "none"
+        },
+        "guidedVariations": [
+            {
+                "id": "f312629a-f9c6-4f44-810c-461c903bc125",
+                "default": true,
+                "variationAttributes": [],
+                "connected": false,
+                "actions": [
+                    {
+                        "name": "Preheat",
+                        "stepGroups": [
+                            {
+                                "steps": [
+                                    {
+                                        "displayText": "Preheat the oven to 350°F. Adjust a rack to the lowest position in the oven.",
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/asw-dWvEWOuWAEUWZvtiZm166zMxYiPJ1CWAJ3hi-DJWzVLMYM7GAzSCP7CUGoNkDj2YE7QY-SR3KHcNmODn_w",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/c5d042a1-7544-420b-a99c-4bb3cbf7b42c/gF7vdRpzTESAX3xKJr4y_Step_1_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/c5d042a1-7544-420b-a99c-4bb3cbf7b42c/gF7vdRpzTESAX3xKJr4y_Step_1_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/c5d042a1-7544-420b-a99c-4bb3cbf7b42c/gF7vdRpzTESAX3xKJr4y_Step_1_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/gF7vdRpzTESAX3xKJr4y_Step_1_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Prep",
+                        "stepGroups": [
+                            {
+                                "steps": [
+                                    {
+                                        "displayText": "Line a roasting pan with aluminum foil and position a roasting rack inside of it.",
+                                        "equipment": [
+                                            {
+                                                "id": "59948088-1260-45b6-a803-248f34d76d45",
+                                                "name": "roasting pan"
+                                            },
+                                            {
+                                                "id": "76ebf3d5-3c31-4b91-8dee-dac0f8cc5f94",
+                                                "name": "roasting rack"
+                                            },
+                                            {
+                                                "id": "6dc0fbfa-4890-4499-ad05-11efbf5b37af",
+                                                "name": "aluminum foil"
+                                            }
+                                        ],
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/OvdgOhr_Qv13bnnhcXt233j2HNa6xkLKZuazn_hM828k_zWCHCa8lkU0md3D0kzu3B-6wQ3uec-Bbt3NZ-IZ",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/e4f62967-dac0-44d7-8f1f-2511bd852995/Woz66M0nSEup7UAmB3Wn_Step_2_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/e4f62967-dac0-44d7-8f1f-2511bd852995/Woz66M0nSEup7UAmB3Wn_Step_2_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/e4f62967-dac0-44d7-8f1f-2511bd852995/Woz66M0nSEup7UAmB3Wn_Step_2_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/Woz66M0nSEup7UAmB3Wn_Step_2_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "Liberally season the turkey with the salt and black pepper, taking care to season the outside as well as the internal cavity. Set the turkey breast side up onto the roasting rack and tuck the wing tips underneath the body.",
+                                        "equipment": [
+                                            {
+                                                "id": "59948088-1260-45b6-a803-248f34d76d45",
+                                                "name": "roasting pan"
+                                            },
+                                            {
+                                                "id": "76ebf3d5-3c31-4b91-8dee-dac0f8cc5f94",
+                                                "name": "roasting rack"
+                                            },
+                                            {
+                                                "id": "6dc0fbfa-4890-4499-ad05-11efbf5b37af",
+                                                "name": "aluminum foil"
+                                            },
+                                            {
+                                                "id": "c582953f-1754-4f62-9d03-56d243ef01f4",
+                                                "name": "measuring spoons"
+                                            }
+                                        ],
+                                        "ingredientLines": [
+                                            {
+                                                "ingredient": "turkey",
+                                                "ingredientId": "7a1a0115-bc89-4db5-a6ed-876e614b361f",
+                                                "sortOrder": 0,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                                                            "name": "",
+                                                            "abbreviation": "",
+                                                            "plural": "",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                                                            "name": "",
+                                                            "abbreviation": "",
+                                                            "plural": "",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1
+                                                    }
+                                                },
+                                                "category": "Meat",
+                                                "remainder": "11-14 pounds, giblets removed, patted dry"
+                                            },
+                                            {
+                                                "ingredient": "salt",
+                                                "ingredientId": "e01cac82-90ba-4267-8201-4d4d16332fb4",
+                                                "sortOrder": 1,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1.5
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1.5
+                                                    }
+                                                },
+                                                "category": "Seasonings",
+                                                "remainder": ""
+                                            },
+                                            {
+                                                "ingredient": "black pepper",
+                                                "ingredientId": "30b7a1fc-9c68-43e8-8bf8-1a0d83aa1788",
+                                                "sortOrder": 2,
+                                                "category": "Seasonings",
+                                                "remainder": "to taste"
+                                            }
+                                        ],
+                                        "imageUrl": "https://lh3.googleusercontent.com/9xZ8tsg3GI0TApZ2Ni5Jd-mAZTPqgc6eL1ru3MDS83jzK3qt9tM7sUjLs9Gghk7TDpsiGbPZsgiqi5pDWI6z",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/89419eb7-eadd-4ca5-9503-3f00d4dc5aee/ZS7CjmiwSniO6QKbmRgz_Step_3_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/89419eb7-eadd-4ca5-9503-3f00d4dc5aee/ZS7CjmiwSniO6QKbmRgz_Step_3_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/89419eb7-eadd-4ca5-9503-3f00d4dc5aee/ZS7CjmiwSniO6QKbmRgz_Step_3_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/ZS7CjmiwSniO6QKbmRgz_Step_3_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "Remove the leaves from 2 stems of rosemary and finely mince. Reserve the remainder of the bunch.",
+                                        "equipment": [
+                                            {
+                                                "id": "465f0a37-30e6-43f6-b038-74db812044d4",
+                                                "name": "knife"
+                                            },
+                                            {
+                                                "id": "85acedac-8537-499b-880e-12a751c2b483",
+                                                "name": "cutting board"
+                                            }
+                                        ],
+                                        "ingredientLines": [
+                                            {
+                                                "ingredient": "fresh rosemary",
+                                                "ingredientId": "b7f74797-5d70-424b-9e07-e45a0c546c49",
+                                                "sortOrder": 0,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "124631f4-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "bunch",
+                                                            "abbreviation": "bunch",
+                                                            "plural": "bunches",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "124631f4-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "bunch",
+                                                            "abbreviation": "bunch",
+                                                            "plural": "bunches",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 1
+                                                    }
+                                                },
+                                                "category": "Fresh Vegetables"
+                                            }
+                                        ],
+                                        "imageUrl": "https://lh3.googleusercontent.com/rzfUFJrneeP_RzvYEuoqsMo3jiGww8TaAMOBYMPts2TrxgQfYpDNiBU00k4bdhzzqETbR8MGNLocvrpgSK4y",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/723e4d4b-a2e2-4921-884e-153f2466e01b/6ziZeoLISVyPTBsRnERb_Step_4_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/723e4d4b-a2e2-4921-884e-153f2466e01b/6ziZeoLISVyPTBsRnERb_Step_4_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/723e4d4b-a2e2-4921-884e-153f2466e01b/6ziZeoLISVyPTBsRnERb_Step_4_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/6ziZeoLISVyPTBsRnERb_Step_4_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "Place the softened butter and olive oil in a medium bowl. Add the minced rosemary, the zest of both lemons, and the garlic powder. Stir vigorously with a fork until the mixture is mostly combined. It is okay if some lumps of butter remain.",
+                                        "equipment": [
+                                            {
+                                                "id": "c582953f-1754-4f62-9d03-56d243ef01f4",
+                                                "name": "measuring spoons"
+                                            },
+                                            {
+                                                "id": "72cf2f57-daeb-485b-a9db-0080987858b7",
+                                                "name": "small mixing bowl"
+                                            },
+                                            {
+                                                "id": "772b0f9a-3ad1-4c64-b1c3-cec98e334609",
+                                                "name": "spoon"
+                                            },
+                                            {
+                                                "id": "4ce37006-4ae1-4e89-8c04-6aac92951341",
+                                                "name": "zester grater"
+                                            }
+                                        ],
+                                        "ingredientLines": [
+                                            {
+                                                "ingredient": "butter",
+                                                "ingredientId": "9ed78948-13d2-4a5f-9089-1685267e675c",
+                                                "sortOrder": 0,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    }
+                                                },
+                                                "category": "Butter & Margarine",
+                                                "remainder": "softened"
+                                            },
+                                            {
+                                                "ingredient": "extra-virgin olive oil",
+                                                "ingredientId": "6ea1b4fd-e6a0-4eec-ae75-2bba261ae482",
+                                                "sortOrder": 1,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "124a0414-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "tablespoon",
+                                                            "abbreviation": "tbsp",
+                                                            "plural": "tablespoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    }
+                                                },
+                                                "category": "Oil"
+                                            },
+                                            {
+                                                "ingredient": "lemon",
+                                                "ingredientId": "13a1c71d-5174-435e-9f77-511a21bf2072",
+                                                "sortOrder": 2,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                                                            "name": "",
+                                                            "abbreviation": "",
+                                                            "plural": "",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "203f101c-fe8f-102c-a985-0030485841f8",
+                                                            "name": "",
+                                                            "abbreviation": "",
+                                                            "plural": "",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    }
+                                                },
+                                                "category": "Fresh Fruit",
+                                                "remainder": "large, zested"
+                                            },
+                                            {
+                                                "ingredient": "garlic powder",
+                                                "ingredientId": "b804dccb-fed6-4d1d-aeed-98344a6ff62d",
+                                                "sortOrder": 3,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "124afc0c-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "teaspoon",
+                                                            "abbreviation": "tsp",
+                                                            "plural": "teaspoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 0.5
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "124afc0c-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "teaspoon",
+                                                            "abbreviation": "tsp",
+                                                            "plural": "teaspoons",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 0.5
+                                                    }
+                                                },
+                                                "category": "Seasonings"
+                                            }
+                                        ],
+                                        "imageUrl": "https://lh3.googleusercontent.com/YgSAqAKJscfodeRnYyXWBYGTGvymkMMTqvQ2Y6GOw6tSVlABfKKq9Sa-Org1i-A8IWf0KdTrDeKgn3eDtzru",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/e17dbc96-9ad3-4291-ba3d-063c8cdb3064/6pqm8TyfTsSbx70wmUj7_Step_5_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/e17dbc96-9ad3-4291-ba3d-063c8cdb3064/6pqm8TyfTsSbx70wmUj7_Step_5_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/e17dbc96-9ad3-4291-ba3d-063c8cdb3064/6pqm8TyfTsSbx70wmUj7_Step_5_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/6pqm8TyfTsSbx70wmUj7_Step_5_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "Smash the garlic cloves with a back of a knife and discard the papery skins. Cut the lemons in half. Place the garlic, lemons, and rosemary in the cavity of the turkey.",
+                                        "equipment": [
+                                            {
+                                                "id": "465f0a37-30e6-43f6-b038-74db812044d4",
+                                                "name": "knife"
+                                            },
+                                            {
+                                                "id": "85acedac-8537-499b-880e-12a751c2b483",
+                                                "name": "cutting board"
+                                            },
+                                            {
+                                                "id": "59948088-1260-45b6-a803-248f34d76d45",
+                                                "name": "roasting pan"
+                                            },
+                                            {
+                                                "id": "76ebf3d5-3c31-4b91-8dee-dac0f8cc5f94",
+                                                "name": "roasting rack"
+                                            },
+                                            {
+                                                "id": "6dc0fbfa-4890-4499-ad05-11efbf5b37af",
+                                                "name": "aluminum foil"
+                                            }
+                                        ],
+                                        "ingredientLines": [
+                                            {
+                                                "ingredient": "garlic",
+                                                "ingredientId": "d7adf64b-389a-466a-bb19-e4d8b9dabd26",
+                                                "sortOrder": 0,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "12485e2a-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "head",
+                                                            "abbreviation": "head",
+                                                            "plural": "heads",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 0.5
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "12485e2a-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "head",
+                                                            "abbreviation": "head",
+                                                            "plural": "heads",
+                                                            "kind": "count",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 0.5
+                                                    }
+                                                },
+                                                "category": "Fresh Vegetables"
+                                            }
+                                        ],
+                                        "imageUrl": "https://lh3.googleusercontent.com/N7VuYeiqTzcJDdaF9zXwAqpZYODF36pKxI4hXxHfl0XBzD_RLnWZzr-gshredkZ8o6qpr0wpdPa8CQkoCWtu1A",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/58c335e3-700c-4f03-98fb-918f034c5e18/wvD202ObQvy5QN7Qpzmf_Step_6_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/58c335e3-700c-4f03-98fb-918f034c5e18/wvD202ObQvy5QN7Qpzmf_Step_6_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/58c335e3-700c-4f03-98fb-918f034c5e18/wvD202ObQvy5QN7Qpzmf_Step_6_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/wvD202ObQvy5QN7Qpzmf_Step_6_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "With clean hands, rub the lemon-rosemary butter all over the surface of the turkey, and under the breast skin.",
+                                        "equipment": [
+                                            {
+                                                "id": "59948088-1260-45b6-a803-248f34d76d45",
+                                                "name": "roasting pan"
+                                            },
+                                            {
+                                                "id": "76ebf3d5-3c31-4b91-8dee-dac0f8cc5f94",
+                                                "name": "roasting rack"
+                                            },
+                                            {
+                                                "id": "6dc0fbfa-4890-4499-ad05-11efbf5b37af",
+                                                "name": "aluminum foil"
+                                            }
+                                        ],
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/weONDpbtRKSyXdLldQjsB7ZnD_r85iD0q8g0FcEgRgnaHg_WMlBnX9b7Gcne54DxdSZAbt-aSWXBvRJlXb17",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/d398c9c6-8dfc-4ec6-8062-08f72abfd1a6/mN6Dmkq2RmiIVftL04Rg_Step_7_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/d398c9c6-8dfc-4ec6-8062-08f72abfd1a6/mN6Dmkq2RmiIVftL04Rg_Step_7_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/d398c9c6-8dfc-4ec6-8062-08f72abfd1a6/mN6Dmkq2RmiIVftL04Rg_Step_7_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/mN6Dmkq2RmiIVftL04Rg_Step_7_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    },
+                                    {
+                                        "displayText": "Pour enough chicken broth into the roasting pan to rise 1/2 inch up the sides of the pan.",
+                                        "equipment": [
+                                            {
+                                                "id": "b9e36713-052a-4f48-b3f6-54115bf77d39",
+                                                "name": "measuring cups"
+                                            },
+                                            {
+                                                "id": "59948088-1260-45b6-a803-248f34d76d45",
+                                                "name": "roasting pan"
+                                            },
+                                            {
+                                                "id": "76ebf3d5-3c31-4b91-8dee-dac0f8cc5f94",
+                                                "name": "roasting rack"
+                                            },
+                                            {
+                                                "id": "6dc0fbfa-4890-4499-ad05-11efbf5b37af",
+                                                "name": "aluminum foil"
+                                            }
+                                        ],
+                                        "ingredientLines": [
+                                            {
+                                                "ingredient": "chicken broth",
+                                                "ingredientId": "84d88c20-d72e-4500-ba75-a94c419c58e1",
+                                                "sortOrder": 0,
+                                                "amount": {
+                                                    "metric": {
+                                                        "unit": {
+                                                            "id": "1248a146-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "milliliter",
+                                                            "abbreviation": "ml",
+                                                            "plural": "milliliters",
+                                                            "kind": "volume",
+                                                            "round?": true,
+                                                            "decimal": true
+                                                        },
+                                                        "quantity": 473
+                                                    },
+                                                    "imperial": {
+                                                        "unit": {
+                                                            "id": "1246463a-6e69-102c-9a8a-0030485841f8",
+                                                            "name": "cup",
+                                                            "abbreviation": "cup",
+                                                            "plural": "cups",
+                                                            "kind": "volume",
+                                                            "round?": false,
+                                                            "decimal": false
+                                                        },
+                                                        "quantity": 2
+                                                    }
+                                                },
+                                                "category": "Broths",
+                                                "remainder": "plus more as needed"
+                                            }
+                                        ],
+                                        "imageUrl": "https://lh3.googleusercontent.com/iV8uvM5yrD5Cp8i4IKas9BI5ciiMpIjCsI50iQjm0tSj-1TcTkGliVS9xGfjVEZuXT8h9yZQrdUGdeXkyjnm",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/a2700d9b-3d40-4734-948d-3eb9cf18860c/r3DsQP8cTYGmMutcPJ3s_Step_8_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/a2700d9b-3d40-4734-948d-3eb9cf18860c/r3DsQP8cTYGmMutcPJ3s_Step_8_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/a2700d9b-3d40-4734-948d-3eb9cf18860c/r3DsQP8cTYGmMutcPJ3s_Step_8_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/r3DsQP8cTYGmMutcPJ3s_Step_8_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Oven",
+                        "stepGroups": [
+                            {
+                                "steps": [
+                                    {
+                                        "displayText": "Roast the turkey on lowest rack of oven until the thickest part of the breast or leg reaches an internal temperature of 165°F, 2-3 1/2 hours, depending on its weight. Rotate the pan halfway through the cooking time.",
+                                        "timers": [
+                                            {
+                                                "id": "4062f79f-e184-4f72-9323-9d5bb766a09a",
+                                                "timerName": "Lemon Rosemary Roasted Turkey",
+                                                "repeatable": false,
+                                                "maxRepeat": 0,
+                                                "durationSeconds": 7200,
+                                                "priority": "high",
+                                                "mappingNotificationId": "30ee7f45-acf0-4821-9575-ecbb447aa53e",
+                                                "finishMessage": "Timer is done! Check the turkey and proceed to the next step. "
+                                            }
+                                        ],
+                                        "tip": "Roast turkey for roughly 15 minutes per pound. Avoid placing thermometer too close to bone, which heats differently than meat, and can yield inaccurate temperature readings.",
+                                        "equipment": [
+                                            {
+                                                "id": "4b89072b-273a-46c5-86c5-a4b81bde0d91",
+                                                "name": "oven mitts"
+                                            },
+                                            {
+                                                "id": "551206b8-488e-47f0-a02e-6a0414e4d496",
+                                                "name": "meat thermometer"
+                                            }
+                                        ],
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/ugSXhZja1aPzj8wiCtIJQKkFiGbJqC_g5T-QIBg8lWQioCetlfz9yUnBk_0B7OfuXpy91q7QI3tJcLGJCbiy",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/8584414a-4f86-4304-ae9a-92dffba987b6/BL4mlNnURMmEBD8gqONs_Step_9_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/8584414a-4f86-4304-ae9a-92dffba987b6/BL4mlNnURMmEBD8gqONs_Step_9_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/8584414a-4f86-4304-ae9a-92dffba987b6/BL4mlNnURMmEBD8gqONs_Step_9_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/BL4mlNnURMmEBD8gqONs_Step_9_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Check",
+                        "stepGroups": [
+                            {
+                                "steps": [
+                                    {
+                                        "displayText": "Check to see that turkey is done. Remove from oven or add time as needed.",
+                                        "equipment": [
+                                            {
+                                                "id": "4b89072b-273a-46c5-86c5-a4b81bde0d91",
+                                                "name": "oven mitts"
+                                            },
+                                            {
+                                                "id": "551206b8-488e-47f0-a02e-6a0414e4d496",
+                                                "name": "meat thermometer"
+                                            }
+                                        ],
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/vx-BSKy_QgwnGWOiDTy4FGMmfJKlDPQmXRSl6o4Lpq1_cJwsygv_bwWksei3RP8jbHas1Ec-oXy5M-jnaxmqsg",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/4071f603-7478-4b6c-b555-453c98884837/nsmMijRSRTe5xvUg24D8_Step_10_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/4071f603-7478-4b6c-b555-453c98884837/nsmMijRSRTe5xvUg24D8_Step_10_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/4071f603-7478-4b6c-b555-453c98884837/nsmMijRSRTe5xvUg24D8_Step_10_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/nsmMijRSRTe5xvUg24D8_Step_10_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Serve",
+                        "stepGroups": [
+                            {
+                                "steps": [
+                                    {
+                                        "displayText": "Allow the turkey to rest on the roasting rack for 30 minutes. Transfer the turkey to a cutting board. Carve as desired, and serve.",
+                                        "equipment": [
+                                            {
+                                                "id": "465f0a37-30e6-43f6-b038-74db812044d4",
+                                                "name": "knife"
+                                            },
+                                            {
+                                                "id": "85acedac-8537-499b-880e-12a751c2b483",
+                                                "name": "cutting board"
+                                            }
+                                        ],
+                                        "ingredientLines": [],
+                                        "imageUrl": "https://lh3.googleusercontent.com/VCaQVUjMbdJXQ-ucMu5H_bYyVzfNjB-g4O2fO2kpvR1RkW92axbfZAlFHauvWyp7WZQPHWVT4XyNWlUGVtDNwEg",
+                                        "video": {
+                                            "snapshotUrl": "https://gv.yummlystatic.com/b67e71f6-c0b5-4d25-846a-4bc8be483d79/Ig20qtjTuuJ8Vvz7Cz7C_Step_11_Lemon_Rosemary_Roasted_Turkey/thumbnail_high_00001.png",
+                                            "videoUrls": {
+                                                "ios": "https://gv.yummlystatic.com/b67e71f6-c0b5-4d25-846a-4bc8be483d79/Ig20qtjTuuJ8Vvz7Cz7C_Step_11_Lemon_Rosemary_Roasted_Turkey/hls.m3u8",
+                                                "android": "https://gv.yummlystatic.com/b67e71f6-c0b5-4d25-846a-4bc8be483d79/Ig20qtjTuuJ8Vvz7Cz7C_Step_11_Lemon_Rosemary_Roasted_Turkey/dash.mpd"
+                                            },
+                                            "videoTypeCode": "guided-step",
+                                            "hasAudio": false,
+                                            "originalVideoUrl": "https://s3.amazonaws.com/videos-yummly/Ig20qtjTuuJ8Vvz7Cz7C_Step_11_Lemon_Rosemary_Roasted_Turkey.mp4",
+                                            "createTime": "2021-02-25T18:21:12Z"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "4e4238fc-568d-4f02-8aa6-1acae452acdf",
+                "default": false,
+                "variationAttributes": [],
+                "connected": true,
+                "applianceUnitTypeCode": "convectionOven"
+            }
+        ]
+    }
+}
