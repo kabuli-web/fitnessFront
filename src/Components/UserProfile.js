@@ -48,11 +48,10 @@ const UserProfile = (props) => {
               {(()=>{
                  if(!helpers.checkUndefinedOrNull(age)|| !helpers.checkUndefinedOrNull(height)|| !helpers.checkUndefinedOrNull(weight)|| !helpers.checkUndefinedOrNull(gender)|| !helpers.checkUndefinedOrNull(bodyfat)){
                   setage(props.user.progress.age)
-                  setweight(props.user.progress.age)
-                  setbodyfat(props.user.progress.age)
-                  setgender(props.user.progress.age)
-                  setheight(props.user.progress.age)
-                
+                  setweight(props.user.progress.weight)
+                  setbodyfat(props.user.progress.bodyfat)
+                  setgender(props.user.progress.gender)
+                  setheight(props.user.progress.height)
                  }
                  if(bodyfat==="low"){
                     lowSelected = true;
@@ -92,85 +91,85 @@ const UserProfile = (props) => {
                           
                        <div className="d-flex flex-column justify-content-center">
                        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-info">
-   Edit
-  </button>
-  <div className="modal fade" id="edit-info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div className="modal-dialog">
-      <div className="modal-content">
-        <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLabel">Update Your Info</h5>
-          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div className="modal-body">
-        <form>
-    <div className="mb-3">
-      <label for="weight-input" className="form-label">Your Weight</label>
-      <input onChange={(value)=>{
-        
-        setweight(value.target.value)
-      }} type="number" value={weight} className="form-control" id="weight-input" aria-describedby="weight"></input>
-      <div id="weight" className="form-text">Enter Your current Weight.</div>
-    </div>
-    <div className="mb-3">
-      <label for="age-input" className="form-label">Your Age</label>
-      <input onChange={(value)=>{
-                setage(value.target.value)
+                              Edit
+                              </button>
+                              <div className="modal fade" id="edit-info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                  <div className="modal-content">
+                                    <div className="modal-header">
+                                      <h5 className="modal-title" id="exampleModalLabel">Update Your Info</h5>
+                                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                    <form>
+                                <div className="mb-3">
+                                  <label for="weight-input" className="form-label">Your Weight</label>
+                                  <input onChange={(value)=>{
+                                    
+                                    setweight(value.target.value)
+                                  }} type="number" value={weight} className="form-control" id="weight-input" aria-describedby="weight"></input>
+                                  <div id="weight" className="form-text">Enter Your current Weight.</div>
+                                </div>
+                                <div className="mb-3">
+                                  <label for="age-input" className="form-label">Your Age</label>
+                                  <input onChange={(value)=>{
+                                            setage(value.target.value)
 
-      }} type="number" value={age} className="form-control" id="age-input" aria-describedby="age"></input>
-      <div id="age" className="form-text">Enter Your current Age.</div>
-    </div>
-    <div className="mb-3">
-      <label for="height-input" className="form-label">Your Height</label>
-      <input onChange={(value)=>{
-                setheight(value.target.value)
+                                  }} type="number" value={age} className="form-control" id="age-input" aria-describedby="age"></input>
+                                  <div id="age" className="form-text">Enter Your current Age.</div>
+                                </div>
+                                <div className="mb-3">
+                                  <label for="height-input" className="form-label">Your Height</label>
+                                  <input onChange={(value)=>{
+                                            setheight(value.target.value)
 
-      }} type="number" value={height} className="form-control" id="height-input" aria-describedby="height"></input><span>cm</span>
-      <div id="height" className="form-text">Enter Your current Height.</div>
-    </div>
-    
-    <div className="mb-3">
-    <label for="height-input" className="form-label">Your Gender</label>
-    <select onChange={(value)=>{
-                setgender(value.target.value)
+                                  }} type="number" value={height} className="form-control" id="height-input" aria-describedby="height"></input><span>cm</span>
+                                  <div id="height" className="form-text">Enter Your current Height.</div>
+                                </div>
+                                
+                                <div className="mb-3">
+                                <label for="height-input" className="form-label">Your Gender</label>
+                                <select onChange={(value)=>{
+                                            setgender(value.target.value)
 
-      }} className="form-select" aria-label="Default select example">
-   
-    <option selected={`${maleSelected}`}  value="male">Male</option>
-    <option selected={`${femaleSelected}`} value="female">Female</option>
-  </select>
-  
-    </div>
-    <div className="mb-3">
-    <label for="height-input" className="form-label">Your Body Fat</label>
-    <select onChange={(value)=>{
-                setbodyfat(value.target.value)
+                                  }} className="form-select" aria-label="Default select example">
+                              
+                                <option selected={`${maleSelected}`}  value="male">Male</option>
+                                <option selected={`${femaleSelected}`} value="female">Female</option>
+                              </select>
+                              
+                                </div>
+                                <div className="mb-3">
+                                <label for="height-input" className="form-label">Your Body Fat</label>
+                                <select onChange={(value)=>{
+                                            setbodyfat(value.target.value)
 
-      }} className="form-select" aria-label="Default select example">
-    
-    <option selected={`${lowSelected}`} value="Low">Low</option>
-    <option selected={`${highSelected}`} value="High">High</option>
-    <option selected={`${normalSelected}`} value="Normal">Normal</option>
-  </select>
-  
-    </div>
-    
-  </form>
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" onClick={()=>{
-            props.setProgress({
-              age:age,
-              height:height,
-              gender:gender,
-              weight:weight,
-              bodyfat:bodyfat
-            })
-          }} className="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                                  }} className="form-select" aria-label="Default select example">
+                                
+                                <option selected={`${lowSelected}`} value="Low">Low</option>
+                                <option selected={`${highSelected}`} value="High">High</option>
+                                <option selected={`${normalSelected}`} value="Normal">Normal</option>
+                              </select>
+                              
+                                </div>
+                                
+                              </form>
+                                    </div>
+                                    <div className="modal-footer">
+                                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" onClick={()=>{
+                                        props.setProgress({
+                                          age:age,
+                                          height:height,
+                                          gender:gender,
+                                          weight:weight,
+                                          bodyfat:bodyfat
+                                        })
+                                      }} className="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                        </div>
                           
                       </div>

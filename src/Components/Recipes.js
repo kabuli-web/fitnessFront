@@ -5,7 +5,7 @@ import { Redirect } from 'react-router';
 import * as actions from "../redux/Recipes.js/actions"
 import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
-import $ from 'jquery';
+
 import popUp from "./PopUp";
 
 
@@ -41,7 +41,7 @@ const Recipes = (props)=> {
             get();
        }
     }
-    },[OpenedRecipe])
+    },[])
     helpers.checkUser(props.user,props.getUser)
     
     if(!helpers.checkIfLoggedIn(props.user)){
@@ -111,11 +111,10 @@ const Recipes = (props)=> {
                 setOpenedRecipe( element);
                 setPopUpOpen( true);
                }} type="button" className="btn btn-primary"  >
-   View Details
-  </button>
+                    View Details
+                    </button>
                    </div>
                 </div>
-            
                </div>
                  ))}
            </div>

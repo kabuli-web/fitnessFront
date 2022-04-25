@@ -36,10 +36,13 @@ const Navbar = props =>{
                             <li className="nav-item">
                                <Link to="/RecipeCategories" className="nav-link">Browse Recipes</Link>
                             </li>
-
+                            <li class="nav-item">
+                               <Link to="/IntakeCallender" className="nav-link">Daily Intake</Link>
+                            </li>
                             <li class="nav-item">
                                <Link to="/Login" className="nav-link">{loginLinkTitle}</Link>
                             </li>
+                            
                         </ul>
                     </div>
                     </div>

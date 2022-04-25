@@ -11,6 +11,7 @@ import Workouts from './Components/Workouts'
 import BodyParts from "./Components/BodyParts"
 import FoodTypes from "./Components/FoodTypes"
 import Recipes from "./Components/Recipes"
+import IntakeCallender from "./Components/IntakeCallender"
 
 
 
@@ -31,6 +32,9 @@ const App = (props)=>{
         <Route path="/BodyParts" history={props.history} component={BodyParts}/>
         <Route path="/RecipeCategories" history={props.history} component={FoodTypes}/>
         <Route path="/Recipes/:foodType" history={props.history} component={Recipes}/>
+        <Route path="/IntakeCallender">
+      <IntakeCallender />
+        </Route>
       </Switch>
     </div>
   );
