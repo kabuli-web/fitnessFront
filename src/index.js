@@ -9,7 +9,7 @@ import store from "./redux/store.js"
 import { createBrowserHistory } from "history";
 const customHistory= createBrowserHistory();
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter forceRefresh>
       <Provider store = {store}>
         <App history={customHistory} />
       </Provider>

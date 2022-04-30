@@ -1,7 +1,7 @@
 import * as actionTypes from "./type.js"
 
 
-export const WokoutsReducer =  (state = [], action) =>{ 
+export const WokoutsReducer =  (state = {}, action) =>{ 
             switch (action.type){
 
                 case actionTypes.RequestInitiated:
@@ -11,6 +11,7 @@ export const WokoutsReducer =  (state = [], action) =>{
                     }
                 case actionTypes.RequestSucceeded:
                     return {
+                        ...state,
                         data:action.payload,
                         loading:false
                     }

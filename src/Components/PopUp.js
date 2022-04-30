@@ -68,7 +68,7 @@ const PopUp =(props)=> {
                           </div>
                           <div className="col">
                           <div className="d-flex flex-column">
-                                <p>Kcal: {getData(props?.recipe?.content?.nutrition?.nutritionEstimates.filter(element=> element.attribute==='FAT_KCAL')[0].value)}</p>
+                                <p>Kcal: {getData(props?.recipe?.content?.nutrition?.nutritionEstimates.filter(element=> element.attribute==='FAT_KCAL')[0]?.value)}</p>
                                 <p>Name: {getData(props?.recipe?.content?.details?.name)}</p>
                                 <p>Preperation Time: {getData(props?.recipe?.content?.details?.totalTime)}</p>
                                 <p>Number Of Servings: {getData(props?.recipe?.content?.details?.numberOfServings)}</p>

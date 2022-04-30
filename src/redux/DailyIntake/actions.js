@@ -99,13 +99,15 @@ export const DeleteEntry =  (Entry)=>{
                 let exist = false;
                 let key ;
                 response.forEach((element,k) => {
-                    if(element.id===Entry.id){
+                    console.log(element,k)
+                    console.log(Entry)
+                    if(element.id.toString()===Entry.id){
                         exist=true;
                         key=k;
                     }
                 });
                 if(exist){
-                    response.remove(key)
+                    response.splice(key)
                     DynamicService.setDynamics("IntakeEntries",response)
                     dispatch(RequestSucceeded(response))
                 }else{

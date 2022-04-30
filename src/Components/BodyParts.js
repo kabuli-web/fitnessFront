@@ -12,7 +12,7 @@ import WorkoutService from "../LocalStorageServices/WorkoutServices";
 import {Link} from 'react-router-dom'
 
 const BodyParts = (props)=> {
-    const [bodyparts, setBodyPart] = useState([]);
+    
     var user = "anonymouse";
    
      useEffect(  ()=>{
@@ -25,7 +25,8 @@ const BodyParts = (props)=> {
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
     if(helpers.checkIfLoggedIn(props.user)){
-       if(!helpers.checkUndefinedOrNull(props.bodyparts?.data) || props.bodyparts?.data.length >15|| !props.bodyparts?.data.length>0){
+        console.log("reached")
+       if(!helpers.checkUndefinedOrNull(props.bodyparts?.data) || props.bodyparts?.data.length >15 || helpers.checkUndefinedOrNull(props.bodyparts?.data[0]?.Calories) || !props.bodyparts?.data.length>0){
         console.log("i ran ")   
         try {
             get();
@@ -54,10 +55,11 @@ const BodyParts = (props)=> {
         </div>
     )  : props.bodyparts.error ? (
         <h3>{JSON.stringify(props.bodyparts.error)}</h3>
-    ) : helpers.checkUndefinedOrNull(props.bodyparts?.data) && props.bodyparts?.data.length<15? (
+    ) : helpers.checkUndefinedOrNull(props.bodyparts?.data) && props.bodyparts?.data.length<15 && !helpers.checkUndefinedOrNull(props.bodyparts?.data[0]?.Calories)? (
        
         <div>
           {(()=>{
+              
               //TODO Remove this extra set local storage in other files like workouts too
               if(!helpers.checkUndefinedOrNull(props.bodyparts)|| props.bodyparts.length>0){
                 // props.setBodyParts(props.bodyparts.data)
@@ -109,7 +111,6 @@ const mapStateToProps = state => {
     }
 } 
 const mapDispatchToProps =  (dispatch) => {
-   
         return {
             getBodyParts:  () =>
               dispatch( actions.GetBodyParts()),

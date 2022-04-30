@@ -21,7 +21,7 @@ import React from "react"
 const App = (props)=>{
   return (
     <div>
-      <Navbar/>
+      <Navbar history={props.history} />
       <Switch>
         <Route path="/Home" history={props.history} component={Home}/>
         <Route path="/Login" history={props.history} component={Login}/>

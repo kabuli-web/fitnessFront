@@ -1,10 +1,11 @@
 /* eslint-disable no-restricted-globals */
 import React from 'react'
-import FullCalendar, { formatDate } from '@fullcalendar/react'
+import FullCalendar, { computeSegDraggable, formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { connect } from 'react-redux'
+import DailyIntakePopUp from "./DailyIntakePopUp";
 
 
 
@@ -16,15 +17,25 @@ import * as userActions from "../redux/User/actions"
 import popUp from "./PopUp";
 
  class IntakeCallender extends React.Component {
-
-    
+   
     constructor(props) {
         super(props);
         this.state = {
-            weekendsVisible: false,
-            currentEvents: []
+            weekendsVisible: true,
+            currentEvents: (()=>{
+              return this.props.getEntries()
+            })(),
+            popUpOpen: false,
+            Intake:{
+              // title:"",
+              // calories:0
+            },
+            
+            Entries:null,
+            selectedCell:null
         }
       }
+      
     componentDidMount(){
         const get = async()=>{
             //TODO get bodypart from url path
@@ -32,11 +43,11 @@ import popUp from "./PopUp";
             // let data = await result;
             // setWorkouts(data);
         }
-
+        
         helpers.checkUser(this.props.user,this.props.getUser)
         if(helpers.checkIfLoggedIn(this.props.user)){
-            if(!helpers.checkUndefinedOrNull(this.props.Entries?.data) ){
-                
+            if(!helpers.checkUndefinedOrNull(this.props.Entries?.data) || !helpers.checkUndefinedOrNull(this.props.Entries?.data[0]?.Calories)){
+                console.log('data loaded')
                 get();
            }
         }
@@ -51,7 +62,8 @@ import popUp from "./PopUp";
     console.log(this.props.user);
     return <Redirect to="/Login"/>
     }
-    console.log(this.props)
+    // console.log(this.props)
+    console.log(this.state)
     if(this.props.Entries?.loading){
         return (<div><h4>loading...</h4></div>)
     }
@@ -62,9 +74,16 @@ import popUp from "./PopUp";
     if(!helpers.checkUndefinedOrNull(this.props.Entries?.data)){
         return (<div><pre>{JSON.stringify(this.props)}</pre></div>)
     }
+    
+   try {
     return (
-      <div className='demo-app'>
-        {this.renderSidebar()}
+      <div >
+        {/* {
+          (()=>{
+            console.log("refreshed")
+          })()
+        }
+        {this.renderSidebar()} */}
         <div className='demo-app-main'>
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -79,22 +98,202 @@ import popUp from "./PopUp";
             selectMirror={true}
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
-            initialEvents={this.props.Entries.data} // alternatively, use the `events` setting to fetch from a feed
+            initialEvents={helpers.checkUndefinedOrNull(this.props.Entries?.data) && helpers.checkUndefinedOrNull(this.props.Entries?.data[0]?.Calories)  ? this.props.Entries.data: [] } // alternatively, use the `events` setting to fetch from a feed
+           
             select={this.handleDateSelect}
-            eventContent={renderEventContent} // custom render function
+            // eventContent={renderEventContent} // custom render function
             eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            eventsSet={this.handleEvents}
+            // eventAdd = {this.SaveEvent}
+            // eventRemove = {this.removeEvent}
+            // called after events are initialized/added/changed/removed
             /* you can update a remote database when these fire:
             eventAdd={function(){}}
             eventChange={function(){}}
             eventRemove={function(){}}
             */
           />
+          <div className="d-flex flex-column align-items-center justify-content-center">
+              <div style={{
+                height:"40px"
+              }}></div>
+              <h2>Total Calories of a selected day {this.state.selectedCell?.startStr}</h2>
+              <h4>{
+                (()=>{
+                  try {
+                    if(!this.state.selectedCell){
+                      return "please select a day"
+                    }
+                    console.log(this.props)
+                    let count = 0;
+                    this.props.Entries.data.filter(e=>e.start.includes(this.state.selectedCell.startStr)).forEach(element => {
+                      count = parseInt(count) + parseInt(element.Calories)
+                    });
+                    return `${count} kCal`;
+                  } catch (error) {
+                    return "something went wrong"
+                  }
+                })()
+                }</h4>
+              <div className="d-flex flex-column">
+                
+                  {
+                    
+                    (()=>{
+                     try {
+                      let list = []
+                      this.props.Entries.data.filter(e=>e.start.includes(this.state.selectedCell?.startStr)).forEach(element => {
+                        list.push(<h4>{element.title}</h4>)
+                        
+                      })
+                      return list;
+                     } catch (error) {
+                       return "something went wrong"
+                     }
+                    })()
+                  }
+                  
+                
+              </div>
+          </div>
+          <div className={`Container-fluid  d-${(()=>{
+        if(this.state.popUpOpen){
+            return "flex"
+        }
+        return "none"
+    })()} align-items-center `} style={{
+        position: "fixed",
+        top:"0",
+        left:"0",
+        width:"100%",
+        height:"100%",
+        backgroundColor:"#00000066",
+        justifyContent:"center",
+        zIndex:1000
+        
+
+    }}>
+      <div className="d-flex flex-column m-1" style={{
+          border:"1px solid #dee2e6",
+          backgroundColor:"white",
+          overflowY:"scroll",
+          height:"90%",
+          width:"300px"
+    }}>
+        <div className="modal-header">
+          <h5 className="modal-title" id="exampleModalLabel">Add Intake</h5>
+          <button onClick={
+              ()=>{
+                this.setState({
+                  popUpOpen:false
+                })
+              }
+          } type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div className="modal-body">
+        <div className="d-flex flex-column">
+        <div className="mb-3">
+            <label for="age-input" className="form-label">Title</label>
+            <input onChange={(value)=>{
+                      this.state.Intake.title = value.target.value
+
+            }} type="text"  className="form-control" id="age-input" aria-describedby="age"></input>
+            <div id="age" className="form-text">Enter The Name of the food.</div>
+          </div>
+          <div className="mb-3">
+            <label for="age-input" className="form-label">Calories</label>
+            <input onChange={(value)=>{
+                    this.state.Intake.calories = value.target.value
+
+            }} type="number"  className="form-control" id="age-input" aria-describedby="age"></input>
+            <div id="age" className="form-text">Enter the ammount of calories in this intake.</div>
+          </div>
+          
+          <div className="d-flex flex-column align-items-center justify-content-center">
+              <div style={{
+                height:"40px"
+              }}></div>
+              <h2>Total Calories in this day</h2>
+              <h4>{
+                (()=>{
+                  if(!this.state.selectedCell){
+                    return "please select a day"
+                  }
+                  console.log(this.props)
+                  let count = 0;
+                  this.props.Entries.data.filter(e=>e.start.includes(this.state.selectedCell.startStr)).forEach(element => {
+                    count = parseInt(count) + parseInt(element.Calories)
+                  });
+                  return `${count} kCal`;
+                })()
+                }</h4>
+              <div className="d-flex flex-column">
+                
+                  {
+                    
+                    (()=>{
+                     try {
+                      let list = []
+                      this.props.Entries.data.filter(e=>e.start.includes(this.state.selectedCell?.startStr)).forEach(element => {
+                        list.push(<p>{element.title}</p>)
+                        
+                      })
+                      return list;
+                     } catch (error) {
+                       return "something went wrong"
+                     }
+                    })()
+                  }
+                  
+                
+              </div>
+          </div>
+        </div>
+        </div>
+        <div className="modal-footer">
+        <button onClick={
+              ()=>{
+                
+                if(this.state.selectedCell.view.calendar){
+                  let callenderApi = this.state.selectedCell.view.calendar
+                console.log(this.state.Intake)
+                let intake ={
+                  id:(()=>{
+                    return this.state.currentEvents.length + 1;
+                  })(),
+                  title:`title: ${this.state.Intake.title} Calories: ${this.state.Intake.calories}`,
+                  Calories:this.state.Intake.calories,
+                  start: this.state.selectedCell.startStr,
+                  end: this.state.selectedCell.endStr,
+                  allDay: this.state.selectedCell.allDay
+                }
+                  callenderApi.addEvent(intake)
+                  this.props.setEntry(intake)
+                  this.setState({
+                    popUpOpen:false,
+                    Intake:{}
+                  })
+                }
+                           }
+          } type="button" className="btn btn-secondary" data-bs-dismiss="modal">Add</button>
+          <button onClick={
+              ()=>{
+                this.setState({
+                  popUpOpen:false
+                })
+              }
+          } type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
         </div>
       </div>
     )
+   } catch (error) {
+     window.location.reload()
+   }
   }
-
+  
   renderSidebar() {
     return (
       <div className='demo-app-sidebar'>
@@ -133,27 +332,36 @@ import popUp from "./PopUp";
   }
 
   handleDateSelect = (selectInfo) => {
-    let title = prompt('Please enter a new title for your event')
+    
+    this.setState({
+      popUpOpen:true,
+      selectedCell:selectInfo
+    })
     let calendarApi = selectInfo.view.calendar
 
+    console.log(selectInfo)
     calendarApi.unselect() // clear date selection
 
-    if (title) {
-      calendarApi.addEvent({
-        id: (()=>{
-            return String(this.state.currentEvents.length+1)
-        })(),
-        title,
-        start: selectInfo.startStr,
-        end: selectInfo.endStr,
-        allDay: selectInfo.allDay
-      })
-    }
+    // if (title) {
+    //   calendarApi.addEvent({
+    //     id: (()=>{
+    //         return String(this.state.currentEvents.length+1)
+    //     })(),
+    //     title,
+    //     start: selectInfo.startStr,
+    //     end: selectInfo.endStr,
+    //     allDay: selectInfo.allDay
+    //   })
+    // }
   }
 
   handleEventClick = (clickInfo) => {
+    console.log(clickInfo)
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
       clickInfo.event.remove()
+      this.props.deleteEntry({
+        id:clickInfo.event._def.publicId
+      })
     }
   }
 
@@ -185,7 +393,7 @@ function renderSidebarEvent(event) {
   )
 }
 const mapStateToProps = state => {
-   
+   console.log(state)
     const IntakeEntries =  state.Entries
     return { Entries:IntakeEntries,
         user:state.user };
@@ -200,7 +408,7 @@ const mapStateToProps = state => {
     //   };
   };
 
-  const mapDispatchToProps =  (dispatch) => {
+const mapDispatchToProps =  (dispatch) => {
    
     return {
         getEntries: ()=>{

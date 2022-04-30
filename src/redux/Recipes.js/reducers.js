@@ -1,7 +1,7 @@
 import * as actionTypes from "./type.js"
 
 
-export const RecipesReducer =  (state = [], action) =>{ 
+export const RecipesReducer =  (state = {}, action) =>{ 
             switch (action.type){
 
                 case actionTypes.RequestInitiated:
