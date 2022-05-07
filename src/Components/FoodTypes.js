@@ -22,37 +22,41 @@ const FoodTypes = (props)=> {
             // let data = await result;
             // setWorkouts(data);
         }
-        helpers.checkUser(props.user,props.getUser)
-        console.log(props.user)
-    if(helpers.checkIfLoggedIn(props.user)){
+        if(!helpers.checkUndefinedOrNull(props.user?.user)){
+            props.getUser()
+           }
+        console.log(props.user?.user)
+    
        if(!helpers.checkUndefinedOrNull(props.foodTypes?.data?.data) || props.foodTypes?.data?.data.length >15|| !props.foodTypes?.data?.data.length>0){
-        console.log("i ran ")   
+        console.log("i ran ")
         try {
             get();
            } catch (error) {
                console.log(error)
            }
        }
-    }
+    
     },[])
     
-    helpers.checkUser(props.user,props.getUser)
-   
-    if(!helpers.checkIfLoggedIn(props.user)){
-    console.log(props.user);
-    return <Redirect to="/Login"/>
-    }
     
-    if(props.user!==undefined && props.user!==null && props.user.username!==undefined ){
-        user = props.user.username;
+   if(props.foodTypes?.loading){
+       return <h4>loading....</h4>
+   }
+    if(!helpers.checkUndefinedOrNull(props.user?.user)){
+        console.log("user not found")
+        
+        return (<div>
+  
+          <h3>User Not Logged In</h3>
+          <Link to="/Login">Login</Link>
+        </div>)
+      }
+    
+    if(props.user?.user!==undefined && props.user?.user!==null && props.user?.user.username!==undefined ){
+        user = props.user?.user.username;
     }
     console.log(props)
-    return props.foodTypes.loading? (
-        <div>
-            <h3>Loading...</h3>
-            
-        </div>
-    )  : props.foodTypes.error ? (
+    return  props.foodTypes.error ? (
         <h3>{JSON.stringify(props.foodTypes.error)}</h3>
     ) :  helpers.checkUndefinedOrNull(props.foodTypes?.data?.data) && props.foodTypes?.data?.data.length<15? (
        
@@ -64,7 +68,7 @@ const FoodTypes = (props)=> {
               }
           })()}
         <h3>Recipe Categories</h3>
-        <p>hey, {user} Here are some Recipe Categories You can Choose From that you might like</p>
+        <p>hey, {props.user?.user?.username} Here are some Recipe Categories You can Choose From that you might like</p>
           
         
        <div className="container-fluid">

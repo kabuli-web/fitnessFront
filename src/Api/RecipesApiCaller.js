@@ -5,7 +5,7 @@ let WorkoutApi = (()=>{
     const options = {
         method: 'GET',
         url: 'https://yummly2.p.rapidapi.com/feeds/list',
-        params: {limit: '24', start: '0', tag: 'list.recipe.other.guided'},
+        params: {limit: '24', start: '0', tag: FoodType},
         headers: {
           'X-RapidAPI-Host': 'yummly2.p.rapidapi.com',
           'X-RapidAPI-Key': '19097e14b4mshe9ee505de60f879p107793jsnc1896b9b0bfd'

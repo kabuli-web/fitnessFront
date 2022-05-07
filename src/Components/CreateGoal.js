@@ -1,36 +1,48 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {connect} from "react-redux";
 import { Redirect } from 'react-router';
 import * as actions from "../redux/User/actions"
 import * as helpers from "../helpers/helpers.js"
+import {Link} from 'react-router-dom'
 
 const CreateGoal =(props)=> {
     var user = "anonymouse";
     const [goal,setGoal]= useState("");
-    const [currentPage,setPage]= useState("");
-    helpers.checkUser(props.user,props.getUser);
-    user = props.user;
-    
-    if(!helpers.checkIfLoggedIn(props.user)){
-        console.log(props.user);
-        return  <Redirect to="/Login"/>
-    }
-    if(helpers.checkUndefinedOrNull(user.goal) && props.currentPage!=="creatGoal"){
-        props.user.error = undefined;
-        props.user.errorExists =false;
-        return  (
+
+    user = props.user?.user;
+    useEffect(  ()=>{
+        if(!helpers.checkUndefinedOrNull(props.user?.user)){
+          props.getUser()
+         }
+    },[])
+
+    if(props.user?.loading){
+        return (
             <div>
-                <pre>{JSON.stringify(user.goal)}</pre>
+                loading...
             </div>
         )
     }
-    var message =  helpers.getError(props.user,"State your goal");
+    if(helpers.checkUndefinedOrNull(props.user?.user?.info?.goal)){
+        return  <Redirect to="/UserProfile"/>
+        //  return (<div><pre>
+        //     {JSON.stringify(props.user.user.info)}
+        //     </pre></div>)
+    }
     
+    if(!helpers.checkIfLoggedIn(props.user?.user) && !props.user?.error){
+        console.log(props.user);
+        return (<div>
+
+            <h3>User Not Logged In</h3>
+            <Link to="/Login">Login</Link>
+          </div>)
+    }
     return (<div>
                 <h3>Create Goal</h3>
-                <p>hello there {user.username} </p>
-                <pre>{message.error}</pre>
+                <p>hello there {props.user?.user?.username} </p>
+                
         <div>
         
         <label htmlFor="goal">
@@ -50,14 +62,10 @@ const CreateGoal =(props)=> {
        
         </div>
         <button onClick={()=>{
-            setPage("");
-
-            props.setGoal({
-                value: goal
-            })
+            props.setGoal(goal)
         
         }}>Next</button>
-        <button onClick={()=>{
+        {/* <button onClick={()=>{
             props.state.currentPage = "CreatePlan";
             props.user.error = undefined;
             props.user.errorExists =false;
@@ -66,7 +74,7 @@ const CreateGoal =(props)=> {
                 user: props.user
             }})
         }
-        }>Back</button>
+        }>Back</button> */}
                 </div>
             )
     }
@@ -74,8 +82,7 @@ const CreateGoal =(props)=> {
 const mapStateToProps = state => {
     return {
         user:state.user,
-        currentPage: state.currentPage,
-        state:state
+        
     }
 } 
 const mapDispatchToProps = (dispatch) => {

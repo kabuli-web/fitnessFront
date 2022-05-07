@@ -6,6 +6,7 @@ import * as actions from "../redux/Workouts/actions"
 import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
 import WorkoutService from "../LocalStorageServices/WorkoutServices";
+import {Link} from 'react-router-dom'
 
 const Workouts = (props)=> {
     const [workouts, setWorkouts] = useState([]);
@@ -37,29 +38,36 @@ const Workouts = (props)=> {
         }
         helpers.checkUser(props.user,props.getUser)
         console.log(props.user)
-    if(helpers.checkIfLoggedIn(props.user)){
+    
        if(!helpers.checkUndefinedOrNull(props.workouts?.data) ||!helpers.checkUndefinedOrNull(props.workouts.data[0].equipment) || !props.workouts.length>0){
             get();
        }
-    }
-    },[])
-    helpers.checkUser(props.user,props.getUser)
     
-    if(!helpers.checkIfLoggedIn(props.user)){
-    console.log(props.user);
-    return <Redirect to="/Login"/>
+    },[])
+    
+    
+    if(props.workouts.loading){
+        return (
+            <div>
+                <h3>Loading...</h3>
+                
+            </div>
+        ) 
+   }
+    if(!helpers.checkIfLoggedIn(props.user?.user) && !props.user?.error){
+        console.log(props.user);
+        return (<div>
+
+            <h3>User Not Logged In</h3>
+            <Link to="/Login">Login</Link>
+          </div>)
     }
     
     if(props.user!==undefined && props.user!==null && props.user.username!==undefined ){
         user = props.user.username;
     }
     console.log(props)
-    return props.workouts.loading? (
-        <div>
-            <h3>Loading...</h3>
-            
-        </div>
-    )  : props.workouts.error ? (
+    return props.workouts.error ? (
         <h3>{props.workouts.error}</h3>
     ) : helpers.checkUndefinedOrNull(props.workouts?.data)&& helpers.checkUndefinedOrNull(props.workouts.data[0].equipment) && props.workouts.data.length>0 ? (
        

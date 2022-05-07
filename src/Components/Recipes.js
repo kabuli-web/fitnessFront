@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from "react";
+import {Link} from 'react-router-dom'
 
 import {connect} from "react-redux";
 import { Redirect } from 'react-router';
@@ -34,31 +35,39 @@ const Recipes = (props)=> {
             // let data = await result;
             // setWorkouts(data);
         }
-        helpers.checkUser(props.user,props.getUser)
-        console.log(props.user)
-    if(helpers.checkIfLoggedIn(props.user)){
+        if(!helpers.checkUndefinedOrNull(props.user?.user)){
+            props.getUser()
+           }
+    
        if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes.data.length>0){
             get();
        }
-    }
+    
     },[])
-    helpers.checkUser(props.user,props.getUser)
     
-    if(!helpers.checkIfLoggedIn(props.user)){
-    console.log(props.user);
-    return <Redirect to="/Login"/>
-    }
-    
-    if(props.user!==undefined && props.user!==null && props.user.username!==undefined ){
-        user = props.user.username;
-    }
-    console.log(props)
-    return props.recipes.loading? (
+   if(props.recipes.loading) {
+       return (
         <div>
             <h3>Loading...</h3>
             
         </div>
-    )  : props.recipes.error ? (
+    )
+   }
+    if(!helpers.checkUndefinedOrNull(props.user?.user)){
+        console.log("user not found")
+        
+        return (<div>
+  
+          <h3>User Not Logged In</h3>
+          <Link to="/Login">Login</Link>
+        </div>)
+      }
+    
+    if(props.user?.user!==undefined && props.user?.user!==null && props.user?.user.username!==undefined ){
+        user = props.user?.user.username;
+    }
+    console.log(props)
+    return    props.recipes.error ? (
         <h3>{props.recipes.error}</h3>
     ) : helpers.checkUndefinedOrNull(props.recipes?.data)&& props.recipes.data.length>0 ? (
        
@@ -86,7 +95,7 @@ const Recipes = (props)=> {
                 }}  >
                        <img className="card-img-top" style={{
                        
-                        height:"100px",
+                        height:"300px",
                         objectFit:"cover"
                     }} src={`${element.display.images[0]}`} alt="" />
                    <div className="card-body">
@@ -96,7 +105,10 @@ const Recipes = (props)=> {
               {element.display.displayName}
           
           </h4>
-                   <p className="card-text">
+                   <p style={{
+                       height:"100px",
+                       overflow: "clip"
+                   }} className="card-text">
                    
                    {(()=>{
                        if(!helpers.checkUndefinedOrNull(element.content?.description?.text)){

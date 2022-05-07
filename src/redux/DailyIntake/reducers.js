@@ -6,7 +6,7 @@ export const IntakeEntriesReducer =  (state = {}, action) =>{
 
                 case actionTypes.RequestInitiated:
                     return {
-                        // ...state,
+                        ...state,
                         loading:true
                     }
                 case actionTypes.RequestSucceeded:
@@ -17,28 +17,33 @@ export const IntakeEntriesReducer =  (state = {}, action) =>{
                     }
                 case actionTypes.GetEntrySucceeded:
                     return {
-                        data:action.payload.Entries,
+                        ...state,
+                        data:action.payload,
                         entry:action.payload.entry,
                         loading:false
                     }
                 case actionTypes.RequestFailed:
                     return {
+                        ...state,
                         data:[],
                         loading:false,
                         error:action.payload
                     }
                 case actionTypes.AddEntry:
                     return {
+                        ...state,
                         data:action.payload,
                         loading:false
                     }
                 case actionTypes.UpdateEntry:
                     return {
+                        ...state,
                         data:action.payload,
                         loading:false
                     }
                 case actionTypes.DeleteEntry:
                     return {
+                        ...state,
                         data:action.payload,
                         loading:false
                     }

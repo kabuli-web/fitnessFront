@@ -5,11 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { connect } from 'react-redux'
-import DailyIntakePopUp from "./DailyIntakePopUp";
-
-
-
-import { Redirect } from 'react-router';
+import {Link} from 'react-router-dom'
 import * as actions from "../redux/DailyIntake/actions"
 import * as helpers from "../helpers/helpers.js"
 import * as userActions from "../redux/User/actions"
@@ -22,17 +18,19 @@ import popUp from "./PopUp";
         super(props);
         this.state = {
             weekendsVisible: true,
-            currentEvents: (()=>{
-              return this.props.getEntries()
+            currentEvents:  (async ()=>{
+              let res = await  this.props.getEntries();
+              return res;
             })(),
             popUpOpen: false,
             Intake:{
               // title:"",
               // calories:0
             },
+            reload:false,
             
-            Entries:null,
-            selectedCell:null
+            selectedCell:null,
+            
         }
       }
       
@@ -44,24 +42,46 @@ import popUp from "./PopUp";
             // setWorkouts(data);
         }
         
-        helpers.checkUser(this.props.user,this.props.getUser)
-        if(helpers.checkIfLoggedIn(this.props.user)){
-            if(!helpers.checkUndefinedOrNull(this.props.Entries?.data) || !helpers.checkUndefinedOrNull(this.props.Entries?.data[0]?.Calories)){
+        helpers.checkUser(this.props.user?.user,this.props.getUser)
+        if(helpers.checkIfLoggedIn(this.props.user?.user)){
+            if(!helpers.checkUndefinedOrNull(this.props.Entries?.data) ){
                 console.log('data loaded')
                 get();
            }
         }
 
     }
+    componentDidUpdate(){
+      const get = async()=>{
+          //TODO get bodypart from url path
+          await this.props.getEntries()
+          // let data = await result;
+          // setWorkouts(data);
+      }
+      
+      
+      
+      if(this.state.reload ){
+          console.log('data loaded')
+          get();
+          this.state.reload = false
+      }
+      
 
+  }
+   
   render() {
 
-        helpers.checkUser(this.props.user,this.props.getUser)
+        
     
-    if(!helpers.checkIfLoggedIn(this.props.user)){
-    console.log(this.props.user);
-    return <Redirect to="/Login"/>
-    }
+      if(!helpers.checkIfLoggedIn(this.props.user?.user) && !this.props.user?.error){
+        console.log(this.props.user);
+        return (<div>
+
+            <h3>User Not Logged In</h3>
+            <Link to="/Login">Login</Link>
+          </div>)
+      }
     // console.log(this.props)
     console.log(this.state)
     if(this.props.Entries?.loading){
@@ -72,8 +92,8 @@ import popUp from "./PopUp";
         return (<div><pre>{JSON.stringify(this.props.Entries.error)}</pre></div>)
     }
     if(!helpers.checkUndefinedOrNull(this.props.Entries?.data)){
-        return (<div><pre>{JSON.stringify(this.props)}</pre></div>)
-    }
+      return (<div><pre>{JSON.stringify(this.props)}</pre></div>)
+  }
     
    try {
     return (
@@ -252,7 +272,7 @@ import popUp from "./PopUp";
         </div>
         <div className="modal-footer">
         <button onClick={
-              ()=>{
+              async ()=>{
                 
                 if(this.state.selectedCell.view.calendar){
                   let callenderApi = this.state.selectedCell.view.calendar
@@ -268,10 +288,12 @@ import popUp from "./PopUp";
                   allDay: this.state.selectedCell.allDay
                 }
                   callenderApi.addEvent(intake)
-                  this.props.setEntry(intake)
+                  await this.props.setEntry(intake)
+                  
                   this.setState({
                     popUpOpen:false,
-                    Intake:{}
+                    Intake:{},
+                    reload:true
                   })
                 }
                            }
@@ -290,40 +312,41 @@ import popUp from "./PopUp";
       </div>
     )
    } catch (error) {
-     window.location.reload()
+    //  window.location.reload()
+    console.log(error)
    }
   }
   
-  renderSidebar() {
-    return (
-      <div className='demo-app-sidebar'>
-        <div className='demo-app-sidebar-section'>
-          <h2>Instructions</h2>
-          <ul>
-            <li>Select dates and you will be prompted to create a new event</li>
-            <li>Drag, drop, and resize events</li>
-            <li>Click an event to delete it</li>
-          </ul>
-        </div>
-        <div className='demo-app-sidebar-section'>
-          <label>
-            <input
-              type='checkbox'
-              checked={this.state.weekendsVisible}
-              onChange={this.handleWeekendsToggle}
-            ></input>
-            toggle weekends
-          </label>
-        </div>
-        <div className='demo-app-sidebar-section'>
-          <h2>All Events ({this.state.currentEvents.length})</h2>
-          <ul>
-            {this.state.currentEvents.map(renderSidebarEvent)}
-          </ul>
-        </div>
-      </div>
-    )
-  }
+  // renderSidebar() {
+  //   return (
+  //     <div className='demo-app-sidebar'>
+  //       <div className='demo-app-sidebar-section'>
+  //         <h2>Instructions</h2>
+  //         <ul>
+  //           <li>Select dates and you will be prompted to create a new event</li>
+  //           <li>Drag, drop, and resize events</li>
+  //           <li>Click an event to delete it</li>
+  //         </ul>
+  //       </div>
+  //       <div className='demo-app-sidebar-section'>
+  //         <label>
+  //           <input
+  //             type='checkbox'
+  //             checked={this.state.weekendsVisible}
+  //             onChange={this.handleWeekendsToggle}
+  //           ></input>
+  //           toggle weekends
+  //         </label>
+  //       </div>
+  //       <div className='demo-app-sidebar-section'>
+  //         <h2>All Events ({this.state.currentEvents.length})</h2>
+  //         <ul>
+  //           {this.state.currentEvents.map(renderSidebarEvent)}
+  //         </ul>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   handleWeekendsToggle = () => {
     this.setState({
@@ -375,14 +398,7 @@ import popUp from "./PopUp";
 
 }
 
-function renderEventContent(eventInfo) {
-  return (
-    <>
-      <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
-    </>
-  )
-}
+
 
 function renderSidebarEvent(event) {
   return (

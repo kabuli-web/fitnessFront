@@ -1,46 +1,75 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import {connect} from "react-redux";
 import { Redirect } from 'react-router';
 import * as actions from "../redux/User/actions"
 import * as helpers from "../helpers/helpers.js"
+import {Link} from 'react-router-dom'
 
 const CreatePlan =(props)=> {
     var user = "anonymouse";
 
-    const [weight,setWeight]= useState("");
-    const [height,setHeight]= useState("");
-    const [age,setAge]= useState("");
+    const [weight,setWeight]= useState(0);
+    const [height,setHeight]= useState(0);
+    const [age,setAge]= useState(0);
     const [gender,setGender]= useState("");
-    const [bodyfat,setBodyfat]= useState("");
-    const [currentPage,setPage]= useState("");
-
+    const [fat,setBodyfat]= useState("");
+    // const [currentPage,setPage]= useState("");
+    useEffect(  ()=>{
+        if(!helpers.checkUndefinedOrNull(props.user?.user)){
+          props.getUser()
+         }
+         
+    },[])
     if(gender ===""){
         setGender("male")
     }
-    if(bodyfat ===""){
+    if(fat ===""){
         setBodyfat("low");
     }
-    helpers.checkUser(props.user,props.getUser);
-    user = props.user;
     
-    var message =  helpers.getError(props.user,"State your weight and height so we can find the ideal weight for you body");
     
-    if(!helpers.checkIfLoggedIn(props.user)){
-        console.log(props.user);
-        return  <Redirect to="/Login"/>
-    }
+    
+   
 
-    if(helpers.checkUndefinedOrNull(user.progress) &&  props.currentPage!=="CreatePlan" && !message.errorExists){
-        props.user.error = undefined;
-        props.user.errorExists =false;
-        return  <Redirect to="/CreateGoal"/>
-    }
+    // if(helpers.checkUndefinedOrNull(user.progress) &&  props.currentPage!=="CreatePlan" && !message.errorExists){
+    //     props.user.error = undefined;
+    //     props.user.errorExists =false;
+    //     return  <Redirect to="/CreateGoal"/>
+    // }
     
+    if(helpers.checkUndefinedOrNull(props.user?.user?.info)){
+        return <Redirect to="/CreateGoal"/>
+        // return (<div><pre>
+        //     {JSON.stringify(props.user.user.info)}
+        //     </pre></div>)
+       }
+    if(props.user?.loading){
+        return (
+            <div>
+                loading...
+            </div>
+        )
+    }
+    // if(props.user?.error){
+    //     return (
+    //         <div>
+    //            {props.user?.error}
+    //         </div>
+    //     )
+    // }
+    if(!helpers.checkIfLoggedIn(props.user?.user) && !props.user?.error){
+        console.log(props.user);
+        return (<div>
+
+            <h3>User Not Logged In</h3>
+            <Link to="/Login">Login</Link>
+          </div>)
+    }
     return (<div>
                 <h3>Create Plan</h3>
-                <p>hello there {user.username} </p>
-                <pre>{message.error}</pre>
+                <p>hello there {props.user?.user?.username} </p>
+                <p>{props.user?.error}</p>
         <div>
         <label htmlFor="username">
             Weight
@@ -81,14 +110,20 @@ const CreatePlan =(props)=> {
         </select>
         </div>
         <button onClick={()=>{
-            setPage("");
+            console.log({
+                weight:weight,
+                height:height,
+                age:age,
+                gender:gender,
+                fat: fat
+                })
            
             props.setProgress({
-                weight,
-                height,
-                age,
-                gender,
-                bodyfat
+                weight:weight,
+                height:height,
+                age:age,
+                gender:gender,
+                fat: fat
                 });
         }}>Next</button>
         
@@ -97,9 +132,9 @@ const CreatePlan =(props)=> {
 }
 
 const mapStateToProps = state => {
+    console.log(state.user)
     return {
-        user:state.user,
-        currentPage: state.currentPage
+        user:state.user
     }
 } 
 const mapDispatchToProps = (dispatch) => {

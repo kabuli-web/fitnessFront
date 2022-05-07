@@ -10,5 +10,12 @@ workouts:WokoutsReducer,
 recipes:RecipesReducer,
 Entries:IntakeEntriesReducer
 })
-
+// const reducers = (state = {}, action) => ({
+//     // username: UsernameReducer(state.username, action),
+//     // builds: BuildsReducer(state.builds, action),
+//     user:userAuth(state.user,action),
+//     workouts:WokoutsReducer(state.workouts,action),
+//     recipes:RecipesReducer(state.recipes,action),
+//     Entries:IntakeEntriesReducer(state.Entries,action)
+// })
 export default reducers;

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {Link} from 'react-router-dom'
 import * as actions from "../redux/User/actions"
 import * as helpers from "../helpers/helpers.js"
@@ -7,16 +7,22 @@ import {connect} from "react-redux";
 const Navbar = props =>{
     var user = "anonymouse";
     let loginLinkTitle = ""
-    helpers.checkUser(props.user,props.getUser);
-    user = props.user;
-    if(!helpers.checkIfLoggedIn(props.user)){
+    // helpers.checkUser(props.user?.user,props.getUser);
+    // user = props.user?.user;
+    // console.log(props)
+    useEffect(  ()=>{
+        if(!helpers.checkUndefinedOrNull(props.user?.user)){
+          props.getUser()
+         }
+    },[])
+    if(!helpers.checkIfLoggedIn(props?.user?.user)){
         
         loginLinkTitle = "Login"
     }else{
         loginLinkTitle = "My Profile"
     }
        
-        return (
+    return (
                 <nav className="navbar navbar-expand-md navbar-light bg-light" >
                      <div className="container">
                     <Link className="navbar-brand text-primary  fw-bold" to="/Home">Fitness App</Link>

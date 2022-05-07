@@ -4,34 +4,77 @@ import { connect } from "react-redux";
 import * as actions from "../redux/User/actions"
 
 import * as helpers from "../helpers/helpers.js"
+import { Redirect } from "react-router";
 
 const LoginBox = (props)=>{
 
     
-    const [username,setUsername]= useState("");
+    const [email,setEmail]= useState("");
     const [password,setPassword]= useState("");
     
     helpers.checkUser(props.user,props.getUser);
 
-    var message =  helpers.getError(props.user,"Login with Your Credentials");
+    // var message =  helpers.getError(props.user,"Login with Your Credentials");
     
+  //   useEffect(  ()=>{
+  //     const get = async()=>{
+  //         //TODO get bodypart from url path
+  //         await props.getRecipes(props.match.params.foodType);
+  //         // let data = await result;
+  //         // setWorkouts(data);
+  //     }
+  //     helpers.checkUser(props.user,props.getUser)
+  //     console.log(props.user)
+  //     if(helpers.checkIfLoggedIn(props.user)){
+  //       if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes.data.length>0){
+  //             get();
+  //       }
+  // }
+  // },[])
+   if(props.user?.loading){
+     return (
+       <div>
+         loading....
+       </div>
+     )
+   }
+  //  if(props.user?.error){
+  //   return (
+  //     <div>
+  //      {props.user?.error}
+  //     </div>
+  //   )
+  // }
+  console.log(props.user)
+   if(helpers.checkUndefinedOrNull(props.user?.user)){
    
+     return <Redirect to="/UserProfile" />
+   }
  return (
     <div>
         <h2>Login</h2>
-        <pre>{message.error}</pre>
+        <pre>Enter Your Credentials</pre>
+        <p>{props.user?.error}</p>
         <div>
-        <label htmlFor="username">
-          Username
+        <label htmlFor="email">
+          Email
         </label>
-        <input name="username" type="text" onChange={evt => setUsername(evt.target.value)}/>
+        <input name="email" type="email" onLoad={(evt)=>{
+                    if(email === ""){
+                        setEmail(evt.target.value)
+                    }
+                }} onChange={evt => setEmail(evt.target.value)}/>
         <label htmlFor="password">
           Password
         </label>
-        <input name="password" type="password" onChange={evt => setPassword(evt.target.value)} />
+        <input name="password" type="password" onLoad={(evt)=>{
+                    if(password ===""){
+                        setPassword(evt.target.value)
+                    }
+                }} onChange={evt => setPassword(evt.target.value)} />
         </div>
         <button onClick={()=>props.login({
-          username,
+          email,
           password
         })}>Login</button>
         <p>

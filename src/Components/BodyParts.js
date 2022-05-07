@@ -22,10 +22,10 @@ const BodyParts = (props)=> {
             // let data = await result;
             // setWorkouts(data);
         }
-        helpers.checkUser(props.user,props.getUser)
-        console.log(props.user)
-    if(helpers.checkIfLoggedIn(props.user)){
-        console.log("reached")
+        helpers.checkUser(props.user?.user,props.getUser)
+        console.log(props.user?.user)
+    
+        
        if(!helpers.checkUndefinedOrNull(props.bodyparts?.data) || props.bodyparts?.data.length >15 || helpers.checkUndefinedOrNull(props.bodyparts?.data[0]?.Calories) || !props.bodyparts?.data.length>0){
         console.log("i ran ")   
         try {
@@ -34,26 +34,32 @@ const BodyParts = (props)=> {
                console.log(error)
            }
        }
-    }
+    
     },[])
     
-    helpers.checkUser(props.user,props.getUser)
-   
-    if(!helpers.checkIfLoggedIn(props.user)){
-    console.log(props.user);
-    return <Redirect to="/Login"/>
+    
+   if(props.bodyparts.loading){
+        return (
+            <div>
+                <h3>Loading...</h3>
+                
+            </div>
+        ) 
+   }
+    if(!helpers.checkIfLoggedIn(props.user?.user) && !props.user?.error){
+        console.log(props.user);
+        return (<div>
+
+            <h3>User Not Logged In</h3>
+            <Link to="/Login">Login</Link>
+          </div>)
     }
     
-    if(props.user!==undefined && props.user!==null && props.user.username!==undefined ){
-        user = props.user.username;
+    if(props.user?.user!==undefined && props.user?.user!==null && props.user?.user.username!==undefined ){
+        user = props.user?.user.username;
     }
     console.log(props)
-    return props.bodyparts.loading? (
-        <div>
-            <h3>Loading...</h3>
-            
-        </div>
-    )  : props.bodyparts.error ? (
+    return   props.bodyparts.error ? (
         <h3>{JSON.stringify(props.bodyparts.error)}</h3>
     ) : helpers.checkUndefinedOrNull(props.bodyparts?.data) && props.bodyparts?.data.length<15 && !helpers.checkUndefinedOrNull(props.bodyparts?.data[0]?.Calories)? (
        

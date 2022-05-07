@@ -93,7 +93,6 @@ var UserServices = (function() {
       RegisterUser:setUserRegistration,
       setUserProgress:setUserProgress,
       setUserGoal:setUserGoal
-
     }
   })();
   

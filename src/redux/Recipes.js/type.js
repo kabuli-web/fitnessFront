@@ -1,5 +1,5 @@
-export const GetRecipes = "GetRecipes";
-export const RequestInitiated = "RequestInitiated";
-export const RequestFailed = "RequestFailed";
-export const RequestSucceeded = "RequestSucceeded";
-export const GetEntrySucceeded = "GetEntrySucceeded";
+export const GetRecipes = "Recip_GetRecipes";
+export const RequestInitiated = "Recip_RequestInitiated";
+export const RequestFailed = "Recip_RequestFailed";
+export const RequestSucceeded = "Recip_RequestSucceeded";
+export const GetEntrySucceeded = "Recip_GetEntrySucceeded";

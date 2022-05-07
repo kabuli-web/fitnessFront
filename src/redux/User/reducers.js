@@ -23,57 +23,93 @@ function loginUserToApi(user){
 
 export const userAuth = (state = user, action) =>{ 
             switch (action.type){
-                case actionTypes.LoginUser:
-                    const result = loginUserToApi(action.payload);
-                    if(result.username==null){
-                        state = {error: result.error}
-                        return state;
+                // case actionTypes.LoginUser:
+                //     const result = loginUserToApi(action.payload);
+                //     if(result.username==null){
+                //         state = {error: result.error}
+                //         return state;
+                //     }
+                //     else{
+                //         UserServices.setUserData(result);
+                //         return result;
+                //     }
+                // case actionTypes.LogoutUser:
+                //     var progress = UserServices.getUserData();
+                   
+                //     var res ={};
+                //     if(helpers.checkUndefinedOrNull(progress)){
+                //         progress.username = undefined;
+                //         res = progress; 
+                //     }
+                //     console.log(res)
+                //     UserServices.setUserData(res)
+                //     state = res
+                //     return state;
+                // case actionTypes.GetUser:
+                //     return UserServices.getUserData();
+                // case actionTypes.Register:
+                //     const RegisterResult = UserServices.RegisterUser(action.payload);
+                //     if(RegisterResult.succeed){
+                //         return RegisterResult.user;
+                //     }
+                //     state = {
+                //         error: RegisterResult.error
+                //     }
+                //     return state;
+                // case actionTypes.setProgress:
+                //     const ProgressResult = UserServices.setUserProgress(action.payload);
+                //     if(ProgressResult.succeed){
+                //         return ProgressResult.user;
+                //     }
+                //     ProgressResult.user.error = ProgressResult.error;
+                //     state = ProgressResult.user;
+                //     return state;
+                // case actionTypes.setGoal:
+                //     const GoalResult = UserServices.setUserGoal(action.payload);
+                //     if(GoalResult.succeed){
+                //         return GoalResult.user;
+                //     }
+                //     GoalResult.user.error = GoalResult.error;
+                //     state = GoalResult.user;
+                //     return state;
+                // default:
+                    
+                // return user;
+
+                case actionTypes.RequestInitiated:
+                    return {
+                        // ...state,
+                        loading:true
                     }
-                    else{
-                        UserServices.setUserData(result);
-                        return result;
+                case actionTypes.RequestSucceeded:
+                    
+                    return {
+                        // ...state,
+                        user:action.payload,
+                        loading:false
+                    }
+                case actionTypes.RequestFailed:
+                    return {
+                        // ...state,
+                        user:null,
+                        loading:false,
+                        error:action.payload
                     }
                 case actionTypes.LogoutUser:
-                    var progress = UserServices.getUserData();
-                   
-                    var res ={};
-                    if(helpers.checkUndefinedOrNull(progress)){
-                        progress.username = undefined;
-                        res = progress; 
-                    }
-                    console.log(res)
-                    UserServices.setUserData(res)
-                    state = res
-                    return state;
+                    UserServices.setUserData(null)
+                    // state = null
+                    return {
+                        // ...state,
+                        user:null
+                    };
                 case actionTypes.GetUser:
-                    return UserServices.getUserData();
-                case actionTypes.Register:
-                    const RegisterResult = UserServices.RegisterUser(action.payload);
-                    if(RegisterResult.succeed){
-                        return RegisterResult.user;
-                    }
-                    state = {
-                        error: RegisterResult.error
-                    }
-                    return state;
-                case actionTypes.setProgress:
-                    const ProgressResult = UserServices.setUserProgress(action.payload);
-                    if(ProgressResult.succeed){
-                        return ProgressResult.user;
-                    }
-                    ProgressResult.user.error = ProgressResult.error;
-                    state = ProgressResult.user;
-                    return state;
-                case actionTypes.setGoal:
-                    const GoalResult = UserServices.setUserGoal(action.payload);
-                    if(GoalResult.succeed){
-                        return GoalResult.user;
-                    }
-                    GoalResult.user.error = GoalResult.error;
-                    state = GoalResult.user;
-                    return state;
+                    return {
+                        // ...state,
+                        user:UserServices.getUserData()
+                    };
                 default:
-                    return user;
+                    return state;
+                }
             }
-        }
+        
         
