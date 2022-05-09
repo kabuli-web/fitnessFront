@@ -96,7 +96,7 @@ export const GetEntries =  ()=>{
             dispatch(RequestSucceeded(response))
         }catch(err){
             console.log(err)
-            dispatch(RequestFailed(err.response.data.error + " " + err.response.data.message))
+            dispatch(RequestFailed(err.response?.data?.error + " " + err.response?.data?.message))
         }
 }
 }
@@ -112,7 +112,8 @@ export const SetEntry =  (Entry)=>{
             dispatch(RequestSucceeded(response))
         }catch(err){
             console.log(err)
-            dispatch(RequestFailed(err.response.data.error + " " + err.response.data.message))
+            dispatch(RequestFailed(err.response?.data?.error + " " + err.response?.data?.message))
+
         }
 }
     // return   async (dispatch)=>{
@@ -173,7 +174,8 @@ export const DeleteEntry =  (Entry)=>{
             dispatch(RequestSucceeded(response))
         }catch(err){
             console.log(err.response)
-            dispatch(RequestFailed(err.response.data.error + " " + err.response.data.message))
+            dispatch(RequestFailed(err.response?.data?.error + " " + err.response?.data?.message))
+
         }
 }
     // return   async (dispatch)=>{

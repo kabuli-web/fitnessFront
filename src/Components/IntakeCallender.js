@@ -92,7 +92,7 @@ import popUp from "./PopUp";
         return (<div><pre>{JSON.stringify(this.props.Entries.error)}</pre></div>)
     }
     if(!helpers.checkUndefinedOrNull(this.props.Entries?.data)){
-      return (<div><pre>{JSON.stringify(this.props)}</pre></div>)
+      return (<div><h4>loading...</h4></div>)
   }
     
    try {
