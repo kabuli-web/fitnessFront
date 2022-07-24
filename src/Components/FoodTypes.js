@@ -75,7 +75,7 @@ const FoodTypes = (props)=> {
       <div className="row mx-auto align-items-start">
       {
           props.foodTypes.data.data.map(element=>(
-            
+                
                <div className="col d-flex justify-content-center "  >
                <Link style={{
                    textDecoration: 'none',
@@ -86,10 +86,8 @@ const FoodTypes = (props)=> {
   <img src={`${element.display.categoryImage}`} style={{objectFit: "cover", width: "200px",height:'100px'}} class="card-img-top" alt="..."></img>
   <div className="card-body">
     <h5 className="card-title">{element.display.displayName}</h5>
-    
   </div>
-</div>
-               
+</div>         
                </Link>
                </div>
            

@@ -23,7 +23,7 @@ let getRecipesFetchOrLocal =  async (foodType)=>{
       try {
         let response =  await RecipesApi.fetchRecipesByFoodType(foodType);
         console.log( response)
-        if(response.length>0){
+        if(response?.length>0){
             // RecipesServices.setTargetFoodTypeRecipes(response)
             return {data:response};
         }
@@ -32,10 +32,10 @@ let getRecipesFetchOrLocal =  async (foodType)=>{
       }
        
         
-      return {error:"error"};
+      return {error:"apple"};
     }
     console.log(recipes.length)
-    if(apiRecipes.length>0){
+    if(apiRecipes?.length>0){
         console.log("local storage service ran")
         return {data:apiRecipes};
     }else{
@@ -97,9 +97,10 @@ export const GetRecipes =  (FoodType)=>{
     return   async (dispatch)=>{
         dispatch(RequestInitiated())
         let response =  await getRecipesFetchOrLocal(FoodType);
-            if(response!==null && response.data!==null && response.data!==undefined && response.data.length>0){
+            if(response!==null && response.data!==null && response.data!==undefined && response.data?.length>0){
                 dispatch(RequestSucceeded(response.data))
             }else{
+                
                 dispatch(RequestFailed(response.error))
             }
     }

@@ -39,7 +39,7 @@ const Recipes = (props)=> {
             props.getUser()
            }
     
-       if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes.data.length>0){
+       if(!helpers.checkUndefinedOrNull(props.recipes?.data) || !props.recipes?.data?.length>0){
             get();
        }
     
@@ -68,14 +68,14 @@ const Recipes = (props)=> {
     }
     console.log(props)
     return    props.recipes.error ? (
-        <h3>{props.recipes.error}</h3>
-    ) : helpers.checkUndefinedOrNull(props.recipes?.data)&& props.recipes.data.length>0 ? (
+        <h3>Oops No Recipes found</h3>
+    ) : helpers.checkUndefinedOrNull(props.recipes?.data) && props.recipes.data?.length>0 ? (
        
       
            
                 <div>
           {(()=>{
-
+            console.log("these are the test "+props.recipes)
             //   if(!helpers.checkUndefinedOrNull(props.recipes) || props.recipes.length>0){
             //     props.setWorkouts(props.workouts)
             //   }
@@ -141,7 +141,7 @@ const Recipes = (props)=> {
        
     ):(
         <div>
-        <pre>{JSON.stringify(props.recipes)}</pre>
+        {/* <pre>{JSON.stringify(props.recipes)}</pre> */}
         <h4>didnt work</h4>
         </div>
             )
