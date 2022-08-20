@@ -11,7 +11,7 @@ async function  AddEntryApi (intake){
     console.log("User api service ran")
     const options = {
         method: 'POST',
-        url: 'http://localhost:5000/User/AddIntake',
+        url: process.env.ADD_INTAKE_URL_BACKEND,
         data:{
             Intake:intake,
             token:UserServices.getUserData().token
@@ -30,7 +30,7 @@ async function  RemoveEntryApi (intake){
     console.log("User api service ran")
     const options = {
         method: 'POST',
-        url: 'http://localhost:5000/User/RemoveIntake',
+        url: process.env.REMOVE_INTAKE_URL_BACKEND,
         data:{
             Intake:intake,
             token:UserServices.getUserData().token
@@ -50,7 +50,7 @@ async function  GetEntriesApi (){
     console.log("User api service ran")
     const options = {
         method: 'GET',
-        url: 'http://localhost:5000/User/GetIntakes',
+        url: process.env.GET_INTAKES_URL_BACKEND,
         headers: {
             "x-access-token":UserServices.getUserData().token
           }

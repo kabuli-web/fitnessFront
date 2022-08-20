@@ -28,7 +28,7 @@ async function  LoginUserApi (user){
         console.log("User api service ran")
         const options = {
             method: 'POST',
-            url: 'http://localhost:5000/User/Login',
+            url: process.env.LOGIN_URL_BACKEND,
             data:{
                 email:user.email,
                 password:user.password
@@ -47,7 +47,7 @@ async function  RegisterUserApi (user){
     console.log("User api service ran")
     const options = {
         method: 'POST',
-        url: 'http://localhost:5000/User/Register',
+        url: process.env.REGISTER_URL_BACKEND,
         data:{
             email:user.email,
             password:user.password,
@@ -66,7 +66,7 @@ async function  SetUserInfoApi (info){
     console.log("User api service ran")
     const options = {
         method: 'POST',
-        url: 'http://localhost:5000/User/SetInfo',
+        url: process.env.SET_INFO_URL_BACKEND,
         data:{
             userInfo:info,
             token:UserServices.getUserData().token
@@ -84,7 +84,7 @@ async function  SetUserGoalApi (goal){
     console.log("User api service ran")
     const options = {
         method: 'POST',
-        url: 'http://localhost:5000/User/SetGoal',
+        url: process.env.SET_GOAL_URL_BACKEND,
         data:{
             goal:goal,
             token:UserServices.getUserData().token
